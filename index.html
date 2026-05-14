@@ -190,6 +190,18 @@
   #login-screen .foot{margin-top:32px;font-size:12px;opacity:.7;line-height:1.5}
   body.logged-out .progress-bar,body.logged-out .modules,body.logged-out .intro,body.logged-out .allies,body.logged-out footer,body.logged-out .adn{display:none}
   body.logged-out .hero{filter:blur(4px);pointer-events:none}
+  /* GALERÍA DE RENDERS */
+  .gallery-wrap{margin:28px 0 8px}
+  .gallery-wrap h5{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--naranja);font-weight:700;margin:0 0 14px}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:8px 0 0}
+  .gallery figure{margin:0;display:flex;flex-direction:column;gap:6px}
+  .gallery img{width:100%;height:200px;object-fit:cover;border-radius:10px;border:1px solid var(--line);cursor:zoom-in;transition:transform .2s,box-shadow .2s;background:var(--gris-claro);display:block}
+  .gallery img:hover{transform:scale(1.02);box-shadow:var(--shadow)}
+  .gallery figcaption{font-size:12.5px;color:var(--muted);line-height:1.5;text-align:left;padding:0 4px}
+  .lightbox{position:fixed;inset:0;background:rgba(20,20,22,.94);display:flex;align-items:center;justify-content:center;z-index:1000;cursor:zoom-out;padding:24px;flex-direction:column;gap:14px}
+  .lightbox img{max-width:96%;max-height:88%;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+  .lightbox .cap{color:#fff;font-size:13px;letter-spacing:.04em;max-width:760px;text-align:center;font-weight:400;opacity:.92}
+  .lightbox .close-hint{position:absolute;top:18px;right:24px;color:rgba(255,255,255,.7);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
   @media (max-width:760px){
     .hero h1{font-size:34px}
     .hero .lead{font-size:16px}
@@ -203,6 +215,7 @@
     .badge{width:48px;height:48px;font-size:17px}
     .body{padding:0 20px 22px}
     .cheat{position:static}
+    .gallery img{height:170px}
   }
 </style>
 </head>
@@ -464,6 +477,12 @@ const MODULES = [
     duration:"60 min",
     jotform:"261330491592052",
     pdf:"./pdfs/M2_El_Proyecto_TheDonDom.pdf",
+    gallery:[
+      {src:"img/M2_parc-1.jpg", caption:"Masterplan general · trama peatonal y disposición de torres + Island Houses"},
+      {src:"img/M2_parc-2.jpg", caption:"Vista aérea de la parcela · 36.657 m² en Dominicus, vecino al Parque Nacional del Este"},
+      {src:"img/M2_parc-3.jpg", caption:"Planta de implantación · 6 torres, Island Houses, beach club y amenities"},
+      {src:"img/M2_parc-4.jpg", caption:"Render conjunto · integración del proyecto con paisajismo nativo caribeño"}
+    ],
     objective:"Tener los datos duros del proyecto memorizados: ubicación exacta, accesos, amenidades, fases del proyecto, plusvalía y TIR proyectados, modelo de condominio y administración. El marco legal completo se cubre en el M3 dedicado.",
     sections:[
       {h:"1. Ubicación exacta y accesos", paragraphs:[
@@ -718,6 +737,13 @@ const MODULES = [
     duration:"60 min",
     jotform:"261331033843044",
     pdf:"./pdfs/M5_Tipologias_Apartamentos.pdf",
+    gallery:[
+      {src:"img/M5_apt-2.jpg", caption:"Living-comedor 2 dormitorios · paleta neutra cálida Cuarto Interior, maderas claras y textiles caribeños"},
+      {src:"img/M5_apt-3.jpg", caption:"Cocina Arancucine italiana integrada · isla central, electrodomésticos panelados y encimera de cuarzo"},
+      {src:"img/M5_apt-4.jpg", caption:"Master suite · cabecera tapizada, paleta arena y madera natural, baño Rastelli en suite"},
+      {src:"img/M5_apt-5.jpg", caption:"Living con terraza integrada · ventanal corredizo y vista filtrada por vegetación nativa"},
+      {src:"img/M5_apt-6.jpg", caption:"Estudio Tipología A · ambiente integrado, mobiliario flexible y máxima eficiencia espacial"}
+    ],
     objective:"Saber de memoria cada tipología disponible en The Don Dom, asociarla a un perfil de comprador ideal y a un argumento comercial específico. La diferencia entre un vendedor amateur y un profesional es que el segundo NO ofrece la unidad incorrecta al cliente incorrecto.",
     sections:[
       {h:"1. Lógica de tipologías", paragraphs:[
@@ -743,7 +769,7 @@ const MODULES = [
         "<strong>Argumento comercial clave:</strong> '<em>Es la unidad que se siente casa. Tus padres, tu hermano y tu hijo caben sin sentirse encerrados. Y cuando la rentás, recibís familias completas — son los huéspedes que más cuidan la propiedad y dejan reviews de 5 estrellas.</em>'"
       ]},
       {h:"5. Penthouse / Ático (130–150 m²) · US$350–400k", paragraphs:[
-        "<strong>Características:</strong> planta superior con terraza propia ampliada, vista panorámica al mar, 2 o 3 dormitorios, doble baño, espacios premium con acabados diferenciados.",
+        "<strong>Características:</strong> planta superior con terraza propia ampliada, vista panorámica al mar, 2 dormitorios, doble baño, espacios premium con acabados diferenciados.",
         "<strong>Rango de precio referencial fase 1:</strong> US$350,000–US$400,000.",
         "<strong>Comprador ideal:</strong> comprador patrimonial. Empresario o profesional senior con capacidad de compra alta que prioriza uso propio y prestigio sobre TIR puro. Es la unidad 'última'.",
         "<strong>Argumento comercial clave:</strong> '<em>En cada edificio hay solo dos. Las primeras que se venden son las que el propietario menos quiere soltar. Si entrás en fase 1, entrás con primera opción de elección.</em>'"
@@ -784,6 +810,14 @@ const MODULES = [
     duration:"45 min",
     jotform:"261330500488047",
     pdf:"./pdfs/M6_Island_Houses_Concepto.pdf",
+    gallery:[
+      {src:"img/M6_ih-02.jpg", caption:"Fachada Island House V3 · revoco blanco caribeño, parasoles de madera tropical y piedra coralina en zócalos"},
+      {src:"img/M6_ih-03.jpg", caption:"Acceso a la villa · jardín privado curado por Cuarto Interior con vegetación nativa"},
+      {src:"img/M6_ih-04.jpg", caption:"Living de doble altura · ventanales corredizos que disuelven la frontera entre interior y jardín"},
+      {src:"img/M6_ih-05.jpg", caption:"Terraza profunda con deck de madera tropical · vista al jardín y al mar Caribe"},
+      {src:"img/M6_ih-06.jpg", caption:"Vista conjunto Island Houses · 228,54 m² de villa privada vecina a Casa de Campo"},
+      {src:"img/M6_ih-07.jpg", caption:"Concepto exterior · arquitectura horizontal, paisajismo integrado y privacidad de villa"}
+    ],
     objective:"Entender el concepto Island Houses como producto distinto al apartamento tradicional, posicionarlo correctamente frente al cliente que busca lifestyle por sobre m² puros, y manejar la pregunta '¿por qué Island House y no apartamento estándar?'.",
     sections:[
       {h:"1. Qué es una Island House", paragraphs:[
@@ -830,6 +864,18 @@ const MODULES = [
     duration:"60 min",
     jotform:"261330773221044",
     pdf:"./pdfs/M7_Cuarto_Interior_Interiorismo.pdf",
+    gallery:[
+      {src:"img/M7_zzcc-03.jpg", caption:"Zona común · pool deck con mobiliario outdoor seleccionado por Cuarto Interior"},
+      {src:"img/M7_zzcc-04.jpg", caption:"Lounge bar de zonas comunes · paleta neutra cálida, materiales nobles e iluminación calibrada"},
+      {src:"img/M7_zzcc-05.jpg", caption:"Beach club / área social · espacios para vivir afuera con confort, sombra natural y textiles caribeños"},
+      {src:"img/M7_zzcc-06.jpg", caption:"Gym · spa · áreas de bienestar firmadas por Cuarto Interior con luz controlada"},
+      {src:"img/M7_zzcc-07.jpg", caption:"Lobby de torre · cada torre con identidad propia dentro del lenguaje general del proyecto"},
+      {src:"img/M7_zzcc-08.jpg", caption:"Zona común exterior · transición jardín-piscina con vegetación nativa"},
+      {src:"img/M7_land-02.jpg", caption:"Paisajismo · palmeras, ipomeas y bougainvilleas en transición jardín-pool-playa"},
+      {src:"img/M7_land-03.jpg", caption:"Paisajismo nativo caribeño · senderos sombreados que se sienten naturales, no plantados"},
+      {src:"img/M7_land-04.jpg", caption:"Concepto landscaping La Isla · especies adaptadas al clima salino del Caribe"},
+      {src:"img/M7_land-05.jpg", caption:"Paisajismo perimetral · jardines que protegen la privacidad de cada unidad"}
+    ],
     objective:"Tener la historia de Cuarto Interior memorizada con datos concretos. Saber explicar por qué tener un estudio de Madrid con portafolio de hoteles europeos diseñando The Don Dom es un diferencial real frente al 99% de los proyectos de la zona.",
     sections:[
       {h:"1. Quién es Cuarto Interior", paragraphs:[
@@ -1241,6 +1287,40 @@ function rerenderSingleModule(code) {
   bindHandlersInside(newEl);
 }
 
+function openLightbox(src, caption) {
+  // Si ya hay uno abierto, lo limpiamos
+  const existing = document.querySelector('.lightbox');
+  if (existing) existing.remove();
+  const box = document.createElement('div');
+  box.className = 'lightbox';
+  box.setAttribute('role', 'dialog');
+  box.setAttribute('aria-label', caption || 'Imagen ampliada');
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = caption || '';
+  box.appendChild(img);
+  if (caption) {
+    const cap = document.createElement('div');
+    cap.className = 'cap';
+    cap.textContent = caption;
+    box.appendChild(cap);
+  }
+  const hint = document.createElement('div');
+  hint.className = 'close-hint';
+  hint.textContent = 'Click o ESC para cerrar';
+  box.appendChild(hint);
+  function close() {
+    box.remove();
+    document.removeEventListener('keydown', onKey);
+  }
+  function onKey(e) {
+    if (e.key === 'Escape') close();
+  }
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', onKey);
+  document.body.appendChild(box);
+}
+
 function bindHandlersInside(root) {
   root.querySelectorAll('input[data-read]').forEach(el => {
     el.addEventListener('change', e => {
@@ -1262,6 +1342,12 @@ function bindHandlersInside(root) {
         if (note) note.style.display = 'block';
         setTimeout(() => frame.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
       }
+    });
+  });
+  // Galería: click en imagen abre lightbox
+  root.querySelectorAll('img[data-lightbox-src]').forEach(img => {
+    img.addEventListener('click', e => {
+      openLightbox(e.currentTarget.dataset.lightboxSrc, e.currentTarget.dataset.lightboxCaption);
     });
   });
 }
@@ -1376,6 +1462,19 @@ function buildParagraph(text) {
 function buildSection(s) {
   return '<div class="section-block"><h6>' + s.h + '</h6>' + s.paragraphs.map(buildParagraph).join('') + '</div>';
 }
+function escAttr(s){
+  return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function buildGallery(m) {
+  if (!m.gallery || !m.gallery.length) return '';
+  const items = m.gallery.map(g =>
+    '<figure>' +
+      '<img src="' + g.src + '" alt="' + escAttr(g.caption) + '" data-lightbox-src="' + g.src + '" data-lightbox-caption="' + escAttr(g.caption) + '" loading="lazy" />' +
+      '<figcaption>' + g.caption + '</figcaption>' +
+    '</figure>'
+  ).join('');
+  return '<div class="gallery-wrap"><h5>Galería visual · renders Cuarto Interior</h5><div class="gallery">' + items + '</div></div>';
+}
 function buildRoleplay(r) {
   let html = '<div class="rp"><h6>' + r.title + '</h6>';
   if (r.setup) html += '<div class="setup">' + r.setup + '</div>';
@@ -1433,6 +1532,7 @@ function buildModule(m, idx) {
     '<ul>' + m.cheat.map(c => '<li>' + c + '</li>').join('') + '</ul>' +
     '</div>' +
     '</div>' +
+    buildGallery(m) +
     '<div class="roleplays">' +
     '<h5 style="color:var(--naranja);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin:32px 0 6px">Casos prácticos para entrenar</h5>' +
     m.roleplays.map(buildRoleplay).join('') +
