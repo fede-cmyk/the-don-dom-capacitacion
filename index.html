@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- deploy-stamp: 2026-05-14T0500Z-v6-m11-plusvalia-renta -->
+<!-- deploy-stamp: 2026-05-14T0515Z-v7-admin-bypass -->
 <html lang="es">
 <head>
 <meta charset="utf-8" />
@@ -1266,6 +1266,15 @@ function bindHandlersInside(root) {
   });
 }
 
+// Lista de admins con free access permanente a todos los módulos
+const ADMIN_EMAILS = ['fede@grupogritt.com'];
+function isAdmin(user) {
+  if (!user || !user.email) return false;
+  const email = user.email.toLowerCase().trim();
+  if (ADMIN_EMAILS.includes(email)) return true;
+  return false;
+}
+
 function loadStateFromUser(user) {
   currentUser = user;
   const remote = (user.user_metadata && user.user_metadata.progress) || null;
@@ -1277,6 +1286,10 @@ function loadStateFromUser(user) {
   }
   const best = score(remote) >= score(local) ? remote : local;
   state = best || { modules: {}, freeAccess: false };
+  // Admins arrancan con free access total — pueden navegar todos los módulos sin pasar tests
+  if (isAdmin(user)) {
+    state.freeAccess = true;
+  }
   // Sincronizar: subir lo local si era mejor
   if (best === local && local) {
     user.update({ data: { progress: local } }).catch(()=>{});
