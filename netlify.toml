@@ -1,0 +1,21 @@
+# Configuración Netlify para The Don Dom La Isla — Plataforma de Capacitación GRITT
+# Identity activado · Google OAuth · Invite-only
+
+[build]
+  publish = "."
+
+# Headers de seguridad recomendados
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# PDFs descargables con cache largo (cambian poco)
+[[headers]]
+  for = "/pdfs/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    Content-Disposition = "attachment"

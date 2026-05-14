@@ -1,0 +1,1427 @@
+<!doctype html>
+<!-- deploy-stamp: 2026-05-14T2245Z-v5-jotforms-nuevos -->
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Don Dom La Isla · Plataforma de Capacitación · gritt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+<style>
+  :root{
+    --gris-oscuro:#404041;
+    --naranja:#d7644b;
+    --naranja-oscuro:#be5541;
+    --verde-oscuro:#738e78;
+    --verde:#8fa58f;
+    --gris-claro:#e9e9e9;
+    --white:#ffffff;
+    --text:#404041;
+    --muted:#7a7a7b;
+    --line:rgba(64,64,65,.12);
+    --shadow: 0 8px 24px rgba(64,64,65,.10);
+    --shadow-strong: 0 14px 40px rgba(64,64,65,.16);
+    color-scheme: light;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#fff;color:var(--text);font-family:'Poppins',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-weight:400}
+  a{color:var(--naranja);text-decoration:none;border-bottom:1px solid rgba(215,100,75,.4);transition:opacity .15s,border-color .15s}
+  a:hover{opacity:.85;border-color:var(--naranja)}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  /* HERO */
+  .hero{background:var(--naranja);color:#fff;padding:72px 0 64px;position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;left:-80px;top:-80px;width:360px;height:360px;border-radius:50%;border:2px solid rgba(255,255,255,.08);}
+  .hero:after{content:"";position:absolute;right:-120px;bottom:-120px;width:480px;height:480px;border-radius:50%;border:2px solid rgba(255,255,255,.10);}
+  .hero .wrap{position:relative;z-index:1}
+  .brand{display:flex;align-items:baseline;gap:14px;margin-bottom:36px}
+  .brand .logo{font-size:42px;font-weight:700;line-height:1;letter-spacing:-.02em;color:#fff;font-family:'Poppins',sans-serif}
+  .brand .logo .dot{display:inline-block;margin-left:1px}
+  .brand .tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:500}
+  .hero h1{font-size:48px;line-height:1.05;margin:0 0 18px;font-weight:700;letter-spacing:-.02em;max-width:780px}
+  .hero h1 em{font-style:normal;color:var(--gris-claro);font-weight:300}
+  .hero .lead{font-size:18px;line-height:1.6;max-width:680px;font-weight:400;color:rgba(255,255,255,.95)}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+  .chip{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.22);padding:8px 16px;border-radius:999px;font-size:13px;font-weight:500;letter-spacing:.02em}
+  .chip strong{color:var(--gris-claro);font-weight:700;margin-right:4px}
+  .cta-row{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 24px;border-radius:8px;font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;border:0;text-decoration:none;font-family:'Poppins',sans-serif;transition:all .15s}
+  .btn.primary{background:var(--gris-oscuro);color:#fff;border-bottom:0}
+  .btn.primary:hover{background:#2b2b2c;transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6);border-bottom:1.5px solid rgba(255,255,255,.6)}
+  .btn.ghost:hover{background:rgba(255,255,255,.10)}
+  /* ADN */
+  .adn{background:var(--gris-oscuro);color:var(--gris-claro);padding:48px 0;position:relative;overflow:hidden}
+  .adn:before{content:"";position:absolute;left:-200px;top:-100px;width:520px;height:520px;border-radius:50%;border:80px solid rgba(255,255,255,.04);}
+  .adn .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+  @media(min-width:760px){.adn .wrap{grid-template-columns:1fr 2fr}}
+  .adn h2{font-size:32px;color:var(--naranja);margin:0;font-weight:600;letter-spacing:-.02em}
+  .adn-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 36px;font-size:18px;color:var(--gris-claro);font-weight:300}
+  /* PROGRESS */
+  .progress-bar{background:var(--gris-claro);padding:18px 0;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(8px);background:rgba(233,233,233,.94)}
+  .progress-bar .wrap{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .progress-bar .label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .progress-bar .track{flex:1;min-width:200px;height:8px;background:#d3d3d3;border-radius:999px;overflow:hidden}
+  .progress-bar .fill{height:100%;background:linear-gradient(90deg,var(--naranja) 0%,var(--naranja-oscuro) 100%);width:0;transition:width .4s ease}
+  .progress-bar .count{font-size:14px;color:var(--gris-oscuro);font-weight:600}
+  .progress-bar button.reset{font-size:10px;letter-spacing:.12em;text-transform:uppercase;background:transparent;border:1px solid var(--line);color:var(--muted);padding:7px 12px;border-radius:6px;cursor:pointer;font-family:'Poppins',sans-serif;font-weight:600}
+  .progress-bar button.reset:hover{background:#fff;color:var(--gris-oscuro)}
+  /* INTRO */
+  .intro{padding:56px 0 32px}
+  .intro h2{font-size:12px;color:var(--naranja);letter-spacing:.22em;text-transform:uppercase;margin:0 0 14px;font-weight:700}
+  .intro h3{font-size:34px;margin:0 0 18px;color:var(--gris-oscuro);line-height:1.15;font-weight:700;letter-spacing:-.02em;max-width:820px}
+  .intro p{font-size:17px;line-height:1.65;color:var(--text);max-width:820px;font-weight:400}
+  .intro .note{margin-top:18px;padding:16px 20px;background:var(--gris-claro);border-left:3px solid var(--verde-oscuro);border-radius:6px;font-size:14px;line-height:1.55;color:var(--gris-oscuro);max-width:820px}
+  /* MODULES */
+  .modules{padding:24px 0 80px;display:grid;grid-template-columns:1fr;gap:20px}
+  details.module{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;transition:transform .15s ease,box-shadow .15s ease}
+  details.module[open]{box-shadow:var(--shadow-strong);transform:translateY(-1px)}
+  details.module.locked{opacity:.55;background:#fafafa}
+  details.module.locked > summary{cursor:not-allowed}
+  details.module.locked summary .head-text h4{color:var(--muted)}
+  details.module > summary{list-style:none;cursor:pointer;padding:24px 28px;display:flex;align-items:center;gap:20px;outline:none}
+  details.module > summary::-webkit-details-marker{display:none}
+  .badge{flex:0 0 auto;width:58px;height:58px;border-radius:14px;background:var(--gris-claro);color:var(--gris-oscuro);font-weight:700;font-size:20px;display:flex;align-items:center;justify-content:center;letter-spacing:-.02em;border:1px solid var(--line);font-family:'Poppins',sans-serif}
+  .module.open-status .badge{background:var(--naranja);color:#fff;border-color:var(--naranja)}
+  .module.done .badge{background:var(--verde-oscuro);color:#fff;border-color:var(--verde-oscuro)}
+  .module.done .badge:after{content:"✓";display:block;font-size:24px;line-height:1}
+  .module.done .badge .num{display:none}
+  .module.locked .badge{background:transparent;border:1.5px dashed var(--line);color:var(--muted)}
+  .module.locked .badge:after{content:"🔒";font-size:18px;display:block}
+  .module.locked .badge .num{display:none}
+  .head-text{flex:1;min-width:0}
+  .head-text .code{display:inline-block;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--naranja);font-weight:700;margin-bottom:5px}
+  .module.done .head-text .code{color:var(--verde-oscuro)}
+  .head-text h4{margin:0;font-size:19px;color:var(--gris-oscuro);font-weight:700;letter-spacing:-.01em;line-height:1.25}
+  .head-text .sub{font-size:13px;color:var(--muted);margin-top:5px;font-weight:400}
+  .head-meta{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+  .duration{font-size:11px;color:var(--muted);border:1px solid var(--line);padding:6px 11px;border-radius:999px;white-space:nowrap;font-weight:500;letter-spacing:.04em}
+  .chev{width:32px;height:32px;border-radius:8px;background:var(--gris-claro);display:flex;align-items:center;justify-content:center;color:var(--gris-oscuro);font-weight:600;font-size:20px;line-height:1;transition:transform .25s}
+  details.module[open] .chev{transform:rotate(45deg);background:var(--naranja);color:#fff}
+  .module.locked .chev{background:transparent;border:1.5px dashed var(--line);color:var(--muted)}
+  /* BODY del módulo */
+  .body{padding:0 28px 28px;border-top:1px solid var(--line)}
+  .body .row{display:grid;grid-template-columns:1fr;gap:28px;margin-top:28px}
+  @media (min-width:760px){.body .row.two{grid-template-columns:1.5fr 1fr}}
+  .block h5{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--naranja);font-weight:700;margin:0 0 14px}
+  .block h6{font-size:17px;color:var(--gris-oscuro);margin:24px 0 10px;font-weight:600;letter-spacing:-.01em}
+  .block p{font-size:15px;line-height:1.7;color:var(--text);margin:0 0 14px;font-weight:400}
+  .block ul{margin:10px 0 0;padding:0;list-style:none}
+  .block ul li{position:relative;padding-left:22px;font-size:15px;line-height:1.65;color:var(--text);margin-bottom:8px;font-weight:400}
+  .block ul li:before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:50%;background:var(--naranja)}
+  .objective{background:var(--gris-claro);border-left:4px solid var(--naranja);padding:20px 22px;border-radius:8px;margin-top:24px}
+  .objective .lab{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--naranja);font-weight:700;margin-bottom:8px}
+  .objective p{font-size:15px;line-height:1.65;color:var(--gris-oscuro);margin:0;font-weight:400}
+  /* Cheatsheet */
+  .cheat{background:#fff;border:1.5px dashed var(--naranja);border-radius:10px;padding:20px 22px;position:sticky;top:88px}
+  .cheat h5{margin-bottom:14px}
+  .cheat ul li{font-size:14px}
+  .cheat ul li:before{background:var(--gris-oscuro)}
+  /* Section blocks */
+  .section-block{margin-top:18px}
+  /* Roleplays */
+  .roleplays{margin-top:32px}
+  .rp{background:var(--gris-claro);border-left:3px solid var(--verde-oscuro);border-radius:8px;padding:18px 22px;margin-top:14px}
+  .rp h6{margin-top:0;color:var(--gris-oscuro);font-size:15px}
+  .rp .setup{font-size:14px;line-height:1.6;color:var(--text);margin-bottom:10px;font-style:italic}
+  .rp ul li{font-size:14px}
+  /* EVAL */
+  .eval{margin-top:36px;padding-top:24px;border-top:1px dashed var(--line)}
+  .eval h5{color:var(--gris-oscuro);font-size:14px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin:0 0 10px}
+  .eval-preview{font-size:14px;color:var(--muted);margin:0 0 18px;line-height:1.55}
+  .eval-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;align-items:center}
+  .btn.small{padding:11px 18px;font-size:12px;letter-spacing:.06em}
+  .btn.naranja{background:var(--naranja);color:#fff}
+  .btn.naranja:hover{background:var(--naranja-oscuro)}
+  .btn.outline{background:transparent;color:var(--gris-oscuro);border:1.5px solid var(--gris-oscuro);border-bottom:1.5px solid var(--gris-oscuro)}
+  .btn.outline:hover{background:var(--gris-oscuro);color:#fff}
+  .btn.verde{background:var(--verde-oscuro);color:#fff}
+  .btn.verde:hover{background:#5e7a64}
+  .btn:disabled{opacity:.4;cursor:not-allowed}
+  .pdf-bar{margin-top:24px;padding:16px 20px;background:#fdf6f4;border:1px solid rgba(215,100,75,.25);border-radius:10px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .pdf-bar .btn{flex:0 0 auto}
+  .pdf-bar .pdf-note{font-size:13px;color:var(--muted);line-height:1.5;flex:1;min-width:200px}
+  .auto-detect-note{font-size:13px;color:var(--verde-oscuro);font-weight:500;margin:0 0 12px;padding:10px 14px;background:rgba(143,165,143,.12);border-left:3px solid var(--verde-oscuro);border-radius:6px}
+  .jotform-frame{width:100%;min-height:720px;border:1px solid var(--line);border-radius:10px;background:#fff;display:none}
+  .jotform-frame.active{display:block}
+  .done-banner{display:none;background:var(--verde-oscuro);color:#fff;padding:18px 22px;border-radius:10px;font-size:15px;font-weight:500;line-height:1.5;margin-top:14px}
+  .done-banner.show{display:block}
+  .done-banner strong{color:#fff;font-weight:700}
+  .locked-msg{padding:32px 24px;text-align:center;color:var(--muted);font-size:15px;line-height:1.6}
+  .locked-msg strong{color:var(--gris-oscuro);font-weight:600}
+  /* Read mark */
+  .read-mark{margin-top:18px;padding:14px 18px;background:#fdf6f4;border:1px solid rgba(215,100,75,.25);border-radius:8px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .read-mark label{font-size:14px;color:var(--gris-oscuro);font-weight:500;cursor:pointer;display:flex;gap:10px;align-items:center}
+  .read-mark input{width:18px;height:18px;accent-color:var(--naranja);cursor:pointer}
+  /* Aliados */
+  .allies{padding:64px 0;background:var(--gris-claro)}
+  .allies h3{font-size:26px;color:var(--gris-oscuro);margin:0 0 22px;font-weight:700;letter-spacing:-.02em}
+  .ally-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:760px){.ally-grid{grid-template-columns:repeat(2,1fr)}}
+  .ally{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;transition:transform .15s,box-shadow .15s}
+  .ally:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .ally h4{margin:0 0 8px;color:var(--gris-oscuro);font-size:17px;font-weight:700}
+  .ally p{margin:0;color:var(--text);font-size:14px;line-height:1.6;font-weight:400}
+  .ally a{display:inline-block;margin-top:10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--naranja);border-bottom:1px solid var(--naranja)}
+  /* Footer */
+  footer{background:var(--naranja);color:#fff;padding:48px 0;text-align:center;position:relative;overflow:hidden}
+  footer:before{content:"";position:absolute;left:-100px;top:-100px;width:280px;height:280px;border-radius:50%;border:2px solid rgba(255,255,255,.10);}
+  footer:after{content:"";position:absolute;right:-80px;bottom:-80px;width:240px;height:240px;border-radius:50%;border:2px solid rgba(255,255,255,.12);}
+  footer .wrap{position:relative;z-index:1}
+  footer .line{font-size:14px;letter-spacing:.06em;opacity:.9;font-weight:400}
+  footer .slogan{font-size:22px;color:#fff;font-weight:700;letter-spacing:-.01em;margin-top:8px}
+  footer .footer-logo{font-size:32px;font-weight:700;letter-spacing:-.02em;margin-bottom:16px;color:#fff}
+  /* AUTH */
+  .user-area{position:absolute;top:24px;right:24px;z-index:5;display:flex;gap:10px;align-items:center}
+  .user-pill{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);color:#fff;padding:8px 14px;border-radius:999px;font-size:13px;font-weight:500;display:flex;gap:10px;align-items:center}
+  .user-pill .avatar{width:24px;height:24px;border-radius:50%;background:var(--gris-claro);color:var(--naranja);font-weight:700;font-size:11px;display:flex;align-items:center;justify-content:center}
+  .user-pill button{background:transparent;border:0;color:#fff;font-size:12px;cursor:pointer;text-decoration:underline;font-family:inherit;opacity:.8}
+  .user-pill button:hover{opacity:1}
+  #login-screen{position:fixed;inset:0;background:linear-gradient(135deg,var(--naranja),var(--naranja-oscuro));display:flex;align-items:center;justify-content:center;z-index:1000;padding:24px;color:#fff;text-align:center}
+  #login-screen .box{max-width:480px;background:rgba(0,0,0,.20);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);border-radius:18px;padding:48px 36px}
+  #login-screen .logo-big{font-size:64px;font-weight:700;letter-spacing:-.02em;margin-bottom:8px;color:#fff}
+  #login-screen .logo-big .dot{color:var(--gris-claro)}
+  #login-screen .tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;opacity:.85;margin-bottom:36px}
+  #login-screen h1{font-size:30px;margin:0 0 14px;font-weight:700;line-height:1.15}
+  #login-screen p{font-size:15px;line-height:1.6;opacity:.9;margin:0 0 28px}
+  #login-screen .btn-login{background:#fff;color:var(--naranja);padding:14px 28px;border-radius:10px;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;border:0;cursor:pointer;font-family:inherit;transition:transform .15s}
+  #login-screen .btn-login:hover{transform:translateY(-2px)}
+  #login-screen .foot{margin-top:32px;font-size:12px;opacity:.7;line-height:1.5}
+  body.logged-out .progress-bar,body.logged-out .modules,body.logged-out .intro,body.logged-out .allies,body.logged-out footer,body.logged-out .adn{display:none}
+  body.logged-out .hero{filter:blur(4px);pointer-events:none}
+  @media (max-width:760px){
+    .hero h1{font-size:34px}
+    .hero .lead{font-size:16px}
+    .brand .logo{font-size:36px}
+    .adn h2{font-size:26px}
+    .adn-grid{font-size:16px}
+    .intro h3{font-size:26px}
+    details.module > summary{padding:20px;gap:14px}
+    .head-text h4{font-size:17px}
+    .duration{display:none}
+    .badge{width:48px;height:48px;font-size:17px}
+    .body{padding:0 20px 22px}
+    .cheat{position:static}
+  }
+</style>
+</head>
+<body class="logged-out">
+
+<!-- LOGIN SCREEN -->
+<div id="login-screen">
+  <div class="box">
+    <div class="logo-big">gritt<span class="dot">.</span></div>
+    <div class="tag">Building Culture · It's all on you</div>
+    <h1>Plataforma interna de capacitación<br/>The Don Dom · La Isla</h1>
+    <p>Ingresá con tu cuenta de Google del equipo para acceder a los 11 módulos y conservar tu progreso desde cualquier dispositivo.</p>
+    <button class="btn-login" id="btn-login">Iniciar sesión con Google</button>
+    <div class="foot">El acceso es solo por invitación. Si todavía no recibiste el correo de invitación, contactá a tu líder comercial.</div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="user-area" id="user-area" style="display:none">
+    <div class="user-pill">
+      <div class="avatar" id="user-avatar">—</div>
+      <span id="user-name">—</span>
+      <button id="btn-logout">Cerrar sesión</button>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo">gritt<span class="dot">.</span></div>
+      <div class="tag">Building Culture · It's all on you</div>
+    </div>
+    <h1>The Don Dom <em>La Isla</em><br/>Plataforma de Capacitación Comercial</h1>
+    <p class="lead">11 módulos para que vendas The Don Dom como un vendedor profesional de real estate, no como uno más. Cada módulo es lectura corta, frases listas para usar con cliente y una evaluación. Avanzá a tu ritmo — pero avanzá.</p>
+    <div class="meta">
+      <span class="chip"><strong>11</strong>módulos</span>
+      <span class="chip"><strong>~7 hs</strong>de capacitación total</span>
+      <span class="chip"><strong>11</strong>evaluaciones integradas</span>
+      <span class="chip">Certificación interna al aprobar M10</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn primary" href="#m0">Empezar por el Módulo 0</a>
+      <a class="btn ghost" href="#aliados">Conocer a los aliados</a>
+    </div>
+  </div>
+</header>
+
+<section class="adn">
+  <div class="wrap">
+    <h2>Nuestro ADN</h2>
+    <div class="adn-grid">
+      <div>Desafíos</div><div>Tenacidad</div>
+      <div>Enfrentar obstáculos</div><div>Construcción</div>
+      <div>Trabajo arduo</div><div>Unidad</div>
+      <div>No rendirse</div><div>Conexión</div>
+    </div>
+  </div>
+</section>
+
+<div class="progress-bar">
+  <div class="wrap">
+    <span class="label">Tu progreso</span>
+    <div class="track"><div class="fill" id="fill"></div></div>
+    <span class="count" id="count">0 / 11</span>
+    <button class="reset" id="reset">Reset</button>
+  </div>
+</div>
+
+<section class="intro wrap">
+  <h2>Cómo funciona la plataforma</h2>
+  <h3>Ruta progresiva — completá un módulo para desbloquear el siguiente</h3>
+  <p>La plataforma se recorre en orden: empezás por el <strong>Módulo 0</strong> (Quiénes somos Grupo GRITT), lo leés entero, completás su evaluación y eso desbloquea el Módulo 1. Y así hasta el examen final del Módulo 10. Cada módulo tiene tres piezas dentro de esta misma página: el <strong>objetivo de aprendizaje</strong>, el <strong>contenido completo</strong> con frases listas para usar con cliente, los <strong>casos prácticos</strong>, y la <strong>evaluación embebida</strong> que valida que el contenido se incorporó.</p>
+  <div class="note">Una vez que completás los 11 módulos al menos una vez, podés volver a abrir cualquier módulo en cualquier orden — la plataforma queda como manual de campo permanente. <strong>Para desbloquear el siguiente módulo necesitás el 100% de aciertos en la evaluación. Certificación interna al aprobar el examen final del M10.</strong></div>
+</section>
+
+<section class="modules wrap" id="modules"></section>
+
+<section class="allies" id="aliados">
+  <div class="wrap">
+    <h3>Los aliados que respaldan The Don Dom La Isla</h3>
+    <div class="ally-grid">
+      <div class="ally">
+        <h4>Cuarto Interior · Madrid</h4>
+        <p>Estudio de arquitectura interior fundado en 2003. Detrás de hoteles como Mondrian Ibiza, Hyde Ibiza, Hard Rock Marbella y Casino Gran Madrid. Firma los espacios y el paisajismo de The Don Dom.</p>
+        <a href="https://www.cuartointerior.com/" target="_blank" rel="noopener">cuartointerior.com →</a>
+      </div>
+      <div class="ally">
+        <h4>Aran Contract / Renzo Rastelli · Italia</h4>
+        <p>Más de 700 torres en 120 países. Proyectos icónicos: One Wall Street, 432 Park Avenue, South Quay Plaza Londres, villa Tommy Hilfiger en Miami. Made in Atri, Abruzzo.</p>
+        <a href="https://rastelli.com/aran-contract/" target="_blank" rel="noopener">rastelli.com/aran-contract →</a>
+      </div>
+      <div class="ally">
+        <h4>Xëliter · Coral Hospitality Corp · RD</h4>
+        <p>Operadora hotelera profesional con presencia en Cap Cana, Punta Cana, Puerto Plata, Juan Dolio, Las Terrenas y villas exclusivas. Modelo turn-key para inversores.</p>
+        <a href="https://www.xeliter.com/" target="_blank" rel="noopener">xeliter.com →</a>
+      </div>
+      <div class="ally">
+        <h4>Grupo Gritt · Comercialización</h4>
+        <p>Grupo Gritt lidera la fuerza comercial. La cultura del equipo se construye en el grupo "Building Culture — It's all on you" con encuentros semanales de formación.</p>
+        <a href="mailto:fede@grupogritt.com">fede@grupogritt.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-logo">gritt<span style="opacity:.8">.</span></div>
+    <div class="line">The Don Dom La Isla · Plataforma interna de capacitación</div>
+    <div class="slogan">Stay hungry, stay foolish — It's all on you</div>
+  </div>
+</footer>
+
+<script>
+// ============ MODULE DATA (full content inline) ============
+const MODULES = [
+  {
+    code:"M0", num:0,
+    title:"Quiénes somos · Grupo GRITT",
+    subtitle:"Cultura Building Culture · misión, visión, valores y por qué ser vendedor profesional GRITT",
+    duration:"45–60 min",
+    jotform:"261330331319042",
+    pdf:"./pdfs/M0_Quienes_Somos_Grupo_GRITT.pdf",
+    objective:"Entender la identidad, trayectoria, marcas y equipo de Grupo GRITT. Saber explicarle a un cliente quiénes somos en menos de 2 minutos. Conocer los proyectos entregados en Argentina y los activos en RD. Identificar al equipo directivo y a las 18 áreas internas que respaldan al vendedor.",
+    sections:[
+      {h:"1. Quiénes somos · Grupo GRITT", paragraphs:[
+        "Grupo GRITT es un holding empresarial dedicado al desarrollo, construcción y comercialización de real estate, con base en Argentina y expansión activa en República Dominicana desde 2024. La marca toma su nombre del concepto anglosajón <em>grit</em>: <strong>fuerza mental, perseverancia, resiliencia y determinación</strong>. Eso no es decorativo — es el ADN operativo del grupo y la forma en la que esperamos que opere cada miembro del equipo comercial.",
+        "Lo que diferencia a GRITT del 99% de los grupos de real estate de la región es que opera en dos verticales simultáneas: <strong>GRITT Experience</strong> (Real Estate puro, en AR y RD) y <strong>Live The</strong> (Lifestyle). Esa visión es lo que nos posiciona como un grupo de “próxima generación” en LATAM y el Caribe.",
+        "<strong>Visión oficial:</strong> Nos visualizamos como líderes de la próxima generación de empresas en real estate y lifestyle en Latinoamérica y el Caribe. Desafiando lo convencional, fusionamos la innovación con la pasión, ofreciendo experiencias únicas que inspiran y trascienden. Nos comprometemos a generar un impacto positivo tangible en las comunidades donde operamos.",
+        "<strong>Misión oficial:</strong> Fusionar la innovación y el diseño en cada una de nuestras empresas para ofrecer experiencias únicas. Nos adaptamos rápidamente a los cambios, buscando la oportunidad de mejora en todo lo que hacemos. Nos comprometemos a hacer las cosas de manera diferente, siendo siempre referentes de compromiso, transparencia, integridad e innovación."
+      ]},
+      {h:"2. Los 6 valores oficiales", paragraphs:[
+        "<strong>1. Transparencia.</strong> Operamos con integridad en todas nuestras relaciones comerciales y comunicaciones, construyendo la confianza en cada interacción. <em>Aplicación al vendedor: nunca prometés lo que no podés cumplir.</em>",
+        "<strong>2. Pasión.</strong> Nos impulsa a ser creativos, mejorar continuamente y agregar valor en todo lo que hacemos. <em>Aplicación al vendedor: cada cliente merece la versión más fresca de vos.</em>",
+        "<strong>3. Innovación.</strong> Impulsamos la creatividad en cada aspecto de nuestro trabajo, promoviendo la experimentación. <em>Aplicación al vendedor: no copies guiones, adaptalos. Buscá ángulos nuevos.</em>",
+        "<strong>4. Mejora continua.</strong> Nuestro medio para alcanzar la excelencia. Aprendemos de nuestros errores. <em>Aplicación al vendedor: cada noche, anotá qué aprendiste de las reuniones del día.</em>",
+        "<strong>5. Adaptabilidad.</strong> Somos flexibles para ajustar estrategias ante cambios. <em>Aplicación al vendedor: si la objeción cambia, cambia tu enfoque. La rigidez mata cierres.</em>",
+        "<strong>6. Colaboración.</strong> Trabajamos con autonomía pero siempre en equipo. <em>Aplicación al vendedor: tu mejor cierre del año puede salir de un comentario al pasar de un compañero.</em>"
+      ]},
+      {h:"3. Nuestro ADN + Statement", paragraphs:[
+        "<strong>Las 8 palabras del ADN GRITT:</strong> Asumir desafíos · Tenacidad · Enfrentar obstáculos · Construcción · Trabajo arduo · Unidad · No rendirse · Conexión.",
+        "<strong>Statement oficial — Crecer juntos:</strong> Nos comprometemos a crear un entorno colaborativo donde cada miembro del equipo se sienta valorado e inspirado. Valoramos el esfuerzo individual y fomentamos la motivación constante. Creemos que el liderazgo, la colaboración y el trabajo en equipo son fundamentales para alcanzar nuestros objetivos."
+      ]},
+      {h:"4. Las marcas del grupo", paragraphs:[
+        "<strong>GRITT Experience · Real Estate AR & RD</strong> es la vertical que reúne todas las marcas que desarrollan, construyen y comercializan inmuebles.",
+        "<strong>Berlín · Argentina</strong> — la marca emblema. Opera 3 líneas: <strong>Berlín Barrios</strong> (Rancho Grande, Pueblo, Pueblo II, Ranch, Ribera + 3 barrios más), <strong>Berlín Studio</strong> (arquitectura residencial a medida) y <strong>Berlín Houses</strong> (multifamiliares + más de 50 modelos de casas prediseñadas). Web: <a href='https://berlin.com.ar' target='_blank' rel='noopener'>berlin.com.ar</a>.",
+        "<strong>Black Bullock</strong> — empresa del grupo joven y dinámica especializada en construcción, ingeniería y desarrollo urbano. Es el brazo constructor que respalda los desarrollos de Berlín y BECCA.",
+        "<strong>Century 21 · República Dominicana</strong> — en 2024 GRITT se expandió a RD inaugurando dos oficinas Century 21: una en Casa de Campo (La Romana) y otra en Punta Cana. Inmobiliaria boutique experta en propiedades turísticas y de lujo en el Caribe. Además opera <strong>Century 21 Academy</strong>, el programa interno de capacitación para agentes.",
+        "<strong>BECCA · República Dominicana</strong> — desarrollador del grupo en RD, especializado en complejos habitacionales, vivienda y barrios cerrados. Detrás de Blend Bayahibe y de <strong>The Don Dom La Isla</strong>, el proyecto que comercializamos hoy.",
+        "<strong>Live The · vertical Lifestyle</strong> — la segunda vertical del grupo, dedicada a marcas que se viven, no solo se compran. Conecta el real estate con la experiencia cotidiana del propietario."
+      ]},
+      {h:"5. Construyendo, siempre · Nuestra trayectoria", paragraphs:[
+        "La frase oficial cuando GRITT habla de su historia es <strong>“Construyendo, siempre.”</strong> No es eslogan publicitario — es la posición desde donde el grupo mira su propia evolución. Cada proyecto entregado es un peldaño y cada cliente que vuelve es la validación de que el modelo funciona.",
+        "<strong>Berlín en acción · números oficiales:</strong> 380 casas finalizadas y entregadas · 78 casas residenciales en obra · 8 barrios cerrados desarrollados · 20 proyectos residenciales multifamiliares.",
+        "<strong>Proyectos AR entregados:</strong> Be XII, Be XIII, BE XIV, BE 491, BE 134, Markel, Hanna, Berlin Woods Houses, Berlin Woods Building (en construcción) y Bruk (entrega mayo 2026). <strong>Barrios con posesión activa:</strong> Pueblo, Ribera 1, Ribera 2, Ranch Bell, Garden Bell. <strong>Berlin Custom House:</strong> más de 300 casas entregadas.",
+        "<strong>Proyectos activos en República Dominicana:</strong> <strong>Blend Bayahibe</strong> en obra avanzada (etapas I y II); <strong>Blend 2</strong> en proceso de inicio de obra; <strong>The Don Dom La Isla</strong> por iniciar obra — lo que comercializamos hoy desde esta plataforma."
+      ]},
+      {h:"6. El equipo que te lidera", paragraphs:[
+        "<strong>CEO — Federico Castillo</strong> (<a href='mailto:fede@grupogritt.com'>fede@grupogritt.com</a>). Lidera la dirección estratégica del grupo, define las verticales y lleva la expansión a RD.",
+        "<strong>Chief Brand Officer — Victoria D'Anunzio</strong> (<a href='mailto:vic@grupogritt.com'>vic@grupogritt.com</a>). Lidera la estrategia de marca de todas las empresas del grupo.",
+        "<strong>Commercial Director & Business Development — Martín Pacheco</strong> (<a href='mailto:pache@grupogritt.com'>pache@grupogritt.com</a>). Lidera la fuerza comercial y el desarrollo de nuevos negocios. Es tu referente directo.",
+        "<strong>Brand Manager — María Emilia Walz</strong> (<a href='mailto:mili@grupogritt.com'>mili@grupogritt.com</a>). Lleva la gestión cotidiana de marca, contenidos y campañas.",
+        "<strong>Financial Manager — Fabrizio Gomis</strong> (<a href='mailto:fabri@grupogritt.com'>fabri@grupogritt.com</a>). Lidera la gestión financiera del grupo, controlling y reporting.",
+        "<strong>Las 18 áreas internas que respaldan al vendedor:</strong> Desarrollo de Negocios · Arquitectura · Ingeniería · Sistemas · Finanzas · Administración · Legales · Gestoría · Capital Humano · Marketing · Comercial · Compras · Operaciones · Atención al Cliente · Customer Success · Calidad y Procesos · Diseño Industrial · Logística."
+      ]},
+      {h:"7. Cómo se traduce esto al cliente", paragraphs:[
+        "<strong>Cuando preguntan “¿quién es GRITT?” (respuesta de 90 segundos):</strong> '<em>GRITT es un grupo empresarial argentino con dos verticales: real estate y lifestyle. En real estate operamos en Argentina con Berlín — más de 380 casas entregadas, 8 barrios cerrados y 20 proyectos multifamiliares — y en República Dominicana con BECCA, donde desarrollamos Blend Bayahibe y The Don Dom La Isla. El grupo tiene 18 áreas internas trabajando coordinadamente. Si querés ver el portafolio, está todo en berlin.com.ar.</em>'",
+        "<strong>Cuando preguntan “¿quién desarrolla The Don Dom?” (respuesta de 60 segundos):</strong> '<em>The Don Dom La Isla es desarrollo de BECCA, la empresa del grupo GRITT especializada en RD. BECCA ya entregó y opera Blend Bayahibe. La comercialización la lidera GRITT directamente, no un broker externo. Y el respaldo internacional viene de Cuarto Interior (Madrid), Arancucine + Rastelli (Italia) y Xëliter (gestión hotelera). De eso te hablo en los próximos módulos.</em>'",
+        "<strong>Cuando preguntan “¿GRITT tiene experiencia entregando?” (respuesta de 45 segundos):</strong> '<em>Sí, y son números verificables. Berlín entregó 380 casas, 8 barrios cerrados, 20 multifamiliares, 300+ Custom Houses. Hay barrios con posesión activa: Pueblo, Ribera 1 y 2, Ranch Bell, Garden Bell. En RD, BECCA tiene Blend Bayahibe en obra avanzada. El historial del grupo es lo que sostiene la promesa de The Don Dom.</em>'"
+      ]}
+    ],
+    cheat:[
+      "GRITT = fuerza mental, perseverancia, resiliencia, determinación.",
+      "CEO: Federico Castillo. Director Comercial: Martín Pacheco.",
+      "Dos verticales: GRITT Experience (RE AR + RD) y Live The (Lifestyle).",
+      "Marca emblema AR: Berlín (Barrios + Studio + Houses). Constructora: Black Bullock.",
+      "En RD: Century 21 (Casa de Campo + Punta Cana) y BECCA (Blend + The Don Dom).",
+      "Números Berlín: 380 casas entregadas, 78 en obra, 8 barrios, 20 multifamiliares, 300+ Custom Houses.",
+      "Barrios con posesión: Pueblo, Ribera 1, Ribera 2, Ranch Bell, Garden Bell.",
+      "En RD vendemos hoy: Blend Bayahibe + The Don Dom La Isla.",
+      "Web: <strong>berlin.com.ar</strong>.",
+      "6 valores: Transparencia, Pasión, Innovación, Mejora continua, Adaptabilidad, Colaboración.",
+      "Statement: <strong>Crecer juntos</strong>."
+    ],
+    roleplays:[
+      {title:"Caso A — Cliente dominicano pregunta '¿quién es GRITT? Nunca los escuché.'",
+       setup:"Don Roberto, 52 años, dueño de farmacias en Santiago. Te tira la pregunta en frío. Tu tarea: instalar autoridad institucional sin sonar a folleto.",
+       bullets:[
+         "<strong>Mejor respuesta:</strong> '<em>Buena pregunta, Don Roberto. GRITT es un grupo argentino de real estate con 380 casas entregadas en Argentina bajo la marca Berlín — barrios cerrados, multifamiliares, custom houses. Hace dos años nos expandimos a República Dominicana con BECCA, que desarrolla The Don Dom y otros proyectos en Bayahibe. La comercialización la lidero yo directamente como parte del equipo del grupo, no como broker externo. Si querés validar la trayectoria, está todo en berlin.com.ar.</em>'"
+       ]},
+      {title:"Caso B — Inversor italiano pregunta '¿BECCA tiene historial?'",
+       setup:"Stefano, 47 años, milanés con propiedad rentada en Cap Cana. Quiere validar el desarrollador antes de mirar el proyecto.",
+       bullets:[
+         "<strong>Mejor respuesta:</strong> '<em>Stefano, BECCA es la marca de desarrollo del grupo GRITT en RD. GRITT tiene operación consolidada en Argentina hace años — 380 casas entregadas, 8 barrios cerrados, 20 proyectos multifamiliares bajo Berlín. En RD el primer proyecto de BECCA fue Blend Bayahibe, que ya está en obra avanzada. The Don Dom La Isla es el segundo paso: mismo equipo, mismo estándar, ahora con producto premium.</em>'"
+       ]},
+      {title:"Caso C — Pareja pregunta '¿GRITT solo vende The Don Dom?'",
+       setup:"Pareja profesional dominicana viendo opciones de inversión. Quieren saber si trabajan con un broker monoproducto o con una operación más amplia.",
+       bullets:[
+         "<strong>Mejor respuesta:</strong> '<em>GRITT opera dos oficinas Century 21 en RD: Casa de Campo y Punta Cana. Son inmobiliarias boutique especializadas en propiedades turísticas y de lujo. Si después de The Don Dom quieren diversificar a otra zona o tipo de propiedad, el grupo los puede asesorar de punta a punta. No somos un equipo de una sola unidad — somos parte de una operación con presencia en los mercados premium del país.</em>'"
+       ]}
+    ],
+    quiz:"Test de ~25 preguntas. Cubre: misión, visión y los 6 valores; ADN y statement; las marcas del grupo (Berlín, Black Bullock, Century 21 RD, BECCA); los números de Berlín en obra; proyectos AR entregados y RD activos; el equipo directivo y las 18 áreas internas; las 3 respuestas modelo para presentar GRITT al cliente."
+  },
+  {
+    code:"M1", num:1,
+    title:"Storytelling The Don Dom",
+    subtitle:"La Isla como lifestyle · Bayahibe único · narrativa de marca para abrir la conversación",
+    duration:"60 min",
+    jotform:"261330244913045",
+    pdf:"./pdfs/M1_Storytelling_TheDonDom.pdf",
+    objective:"Que el equipo entero cuente la misma historia de The Don Dom, con las mismas palabras clave, en cualquier reunión con cliente. El storytelling es lo primero que escucha un prospecto y lo último que recuerda.",
+    sections:[
+      {h:"1. La promesa de marca en una frase", paragraphs:[
+        "The Don Dom es la oportunidad de ser dueño de una pieza del Caribe dominicano genuino — no del Caribe masificado de Bávaro, sino del Caribe selecto que descubrió Casa de Campo: Bayahibe, Saona, Catalina, el Parque Nacional Cotubanamá.",
+        "Cada decisión del proyecto — interiorismo Cuarto Interior, cocinas Arancucine, administración Xëliter — responde a esa promesa: una propiedad que se siente boutique, que renta como un hotel, que se valoriza como Casa de Campo en sus primeros años.",
+        "<strong>Frase clave para el equipo:</strong> '<em>No vendemos metros cuadrados. Vendemos un pedazo del último Caribe real, con manos europeas en cada detalle.</em>'"
+      ]},
+      {h:"2. La geografía como diferencial", paragraphs:[
+        "Dominicus está dentro de la provincia La Romana, a minutos del aeropuerto internacional de La Romana (LRM) — el aeropuerto que usa Casa de Campo, el más privado y rápido para entrar al país sin pasar por Punta Cana.",
+        "El acceso al mar incluye las dos islas más visitadas del país: <strong>Saona</strong> (parque nacional, playas vírgenes, postal turística #1 de RD) y <strong>Catalina</strong> (snorkel de clase mundial). Hablamos de un proyecto que tiene en el patio trasero atractivos que el resto del país tiene que importar.",
+        "<strong>Comparativa rápida que el vendedor tiene que saber de memoria:</strong> Punta Cana = saturación, alta competencia, ticket bajo, plusvalía agotada en zonas centrales. Bávaro = familias all-inclusive, sin diferenciación premium. Cap Cana = ultra-alta gama pero ticket fuera del rango de la mayoría de inversionistas RD. Dominicus / Bayahibe = el punto exacto donde la plusvalía todavía no se agotó y donde el ticket es accesible para un inversor profesional sin entrar al universo Cap Cana."
+      ]},
+      {h:"3. Los tres tipos de cliente que compran este storytelling", paragraphs:[
+        "<strong>Inversor dominicano (Santo Domingo, Santiago):</strong> quiere segunda residencia + renta turística para que la unidad se pague sola. Reconoce Casa de Campo como referencia, entiende Bayahibe como 'el próximo Cap Cana' antes de que llegue el ruido masivo.",
+        "<strong>Inversor extranjero (USA, Canadá, Italia, España):</strong> busca diversificar fuera de su país, prefiere Caribe estable (RD vs. otros mercados), valora marca italiana y diseño europeo porque le resuena cultural y financieramente.",
+        "<strong>Familia profesional dominicana del exterior:</strong> doctor, ingeniero, abogado que vive en EEUU o España y planea retirarse en RD. Quiere tener casa de playa con valor patrimonial real, no condominio anónimo."
+      ]},
+      {h:"4. Las palabras que SÍ usamos y las que NO", paragraphs:[
+        "<strong>Palabras que SIEMPRE usamos en la conversación:</strong> 'curaduría', 'made in Italy', 'diseño europeo', 'gestión hotelera profesional', 'patrimonio en dólares', 'el último Caribe real', 'piezas del Caribe', 'inversión a largo plazo'.",
+        "<strong>Palabras que NUNCA usamos:</strong> 'apartamento más', 'inversión barata', 'oportunidad rápida', 'no se va a repetir' (suena a táctica), 'urgente' (suena a presión), 'producto' a secas (es una propiedad, no un producto). En real estate, el vocabulario es marca.",
+        "<strong>Frase de cierre del storytelling</strong> que sirve para casi cualquier reunión: '<em>The Don Dom es lo que va a aparecer en revistas en 3 años. Lo que importa es si tú entrás ahora o leés sobre los que entraron.</em>'"
+      ]}
+    ],
+    cheat:[
+      "Ubicación: Dominicus, La Romana (NO Punta Cana, NO Bávaro).",
+      "Aeropuerto: La Romana (LRM), 15 minutos.",
+      "Vecinos directos: Casa de Campo, Saona, Catalina, Parque Cotubanamá.",
+      "Posicionamiento: 'el Caribe selecto que ya no le queda a Cap Cana ni a Bávaro'.",
+      "Aliados de marca: Cuarto Interior (Madrid), Arancucine + Rastelli (Italia), Xëliter (gestión RD)."
+    ],
+    roleplays:[
+      {title:"Caso A — Inversor dominicano que viene comparando con Punta Cana",
+       setup:"Don Roberto, 52 años, dueño de farmacias en Santiago. Pidió la primera reunión porque un amigo invirtió en Bávaro y le recomendó 'un proyecto parecido'. Tu tarea: en los primeros 5 minutos de reunión, instalar el storytelling correcto sin atacar a la competencia.",
+       bullets:[
+         "<strong>Frase de apertura sugerida:</strong> 'Don Roberto, antes de entrar al proyecto, déjeme ubicarlo en el mapa. The Don Dom no está en Punta Cana ni en Bávaro — está en Dominicus, vecino a Casa de Campo, frente a Saona. Es el Caribe que todavía no se masificó.'",
+         "Después introducir aliados: Cuarto Interior, Arancucine, Xëliter — en ese orden."
+       ]},
+      {title:"Caso B — Inversor italiano que ya tiene unidad en Cap Cana",
+       setup:"Stefano, 47 años, milanés con propiedad rentada en Cap Cana. Busca diversificar dentro de RD. Tu tarea: posicionar Bayahibe como 'el contrapunto de Cap Cana', no como 'lo mismo más barato'.",
+       bullets:[
+         "<strong>Frase recomendada:</strong> 'Stefano, Cap Cana es perfección concentrada. Bayahibe es Caribe más auténtico, más boutique, más cerca del estilo de vida que llamamos slow luxury. Para diversificar geográficamente dentro del país y reducir riesgo, Dominicus es la jugada.'",
+         "Cierre del storytelling: 'Estás comprando una pieza de Caribe genuino con manos europeas en cada detalle. Esa combinación, dentro de RD, hoy solo la ofrece The Don Dom.'"
+       ]}
+    ],
+    quiz:"Test de 12 preguntas. Evalúa que el vendedor pueda recitar el storytelling sin notas, identificar las palabras clave correctas y manejar 2 mini-casos de objeción de ubicación."
+  },
+  {
+    code:"M2", num:2,
+    title:"El proyecto · Ubicación y amenidades",
+    subtitle:"Masterplan Fase I · 294 unidades · 6 torres + Island Houses + amenities · cronograma jun 2025 a jun 2028",
+    duration:"60 min",
+    jotform:"261330491592052",
+    pdf:"./pdfs/M2_El_Proyecto_TheDonDom.pdf",
+    objective:"Tener los datos duros del proyecto memorizados: ubicación exacta, accesos, amenidades, fases del proyecto, plusvalía y TIR proyectados, modelo de condominio y administración. El marco legal completo se cubre en el M3 dedicado.",
+    sections:[
+      {h:"1. Ubicación exacta y accesos", paragraphs:[
+        "Dominicus, La Romana, República Dominicana. Provincia La Romana, frente a la zona costera al sur de la isla, vecino a Casa de Campo y al pueblo turístico de Bayahibe.",
+        "<strong>Accesos:</strong> aeropuerto internacional La Romana (LRM) a 15 minutos en auto — recibe vuelos directos desde EEUU, Canadá y Europa. Aeropuerto de Punta Cana (PUJ) a aproximadamente 60 minutos. Aeropuerto Las Américas (Santo Domingo) a 1 hora 40 minutos.",
+        "<strong>Acceso terrestre:</strong> Autopista del Coral conecta Punta Cana–La Romana–Santo Domingo en autopista de altísimo estándar. La distancia mental para un cliente: '<em>desde Punta Cana llegás en una hora; desde Santo Domingo, en una hora y media</em>'."
+      ]},
+      {h:"2. Amenidades del proyecto", paragraphs:[
+        "<strong>Piscina infinity</strong> con vista al mar — el corazón social del proyecto, foto de Instagram más usada por los compradores.",
+        "<strong>Beach club</strong> con servicio de bar, tumbonas y acceso directo al mar.",
+        "<strong>Gimnasio</strong> equipado con maquinaria de gama alta y zona de yoga / functional training.",
+        "<strong>Restaurante propio</strong> con chef ejecutivo — los huéspedes y propietarios no necesitan salir del proyecto para comer bien.",
+        "<strong>Concierge 24/7:</strong> reservas, traslados, excursiones a Saona y Catalina, asistencia médica.",
+        "<strong>Seguridad perimetral 24/7</strong>, control de acceso, parqueo asignado por unidad."
+      ]},
+      {h:"3. Fases del proyecto y plusvalía documentada", paragraphs:[
+        "El proyecto se vende por fases. La <strong>Fase 1</strong> es históricamente la de mejor precio y mejor crecimiento de plusvalía. Lo que cualquier vendedor profesional tiene que saber explicar: cada fase que se cierra abre la siguiente con un ajuste de precio típico del 8–10%.",
+        "<strong>Plusvalía proyectada: 15–25% en los primeros 24 meses post-entrega</strong>, sustentada por tres factores: (a) crecimiento orgánico de Dominicus como destino (datos del Ministerio de Turismo RD), (b) ajustes de fase del proyecto y (c) escasez de oferta premium en la zona.",
+        "<strong>TIR proyectado en renta turística profesional gestionada: 8–12% neto anual</strong>, dependiendo del modelo de operación (Xëliter vs. Airbnb independiente). El vendedor debe saber explicar las dos opciones (ver Módulo 9)."
+      ]},
+      {h:"4. Modelo de propiedad y administración", paragraphs:[
+        "<strong>Régimen de condominio:</strong> cada unidad tiene título individual (no es timeshare). El propietario es dueño absoluto de su apartamento y copropietario de áreas comunes. La explicación legal completa está en el Módulo 3.",
+        "<strong>Administración del condominio:</strong> gastos comunes (mantenimiento de amenidades, seguridad, áreas verdes) — el vendedor debe conocer el monto mensual aproximado por tipología y comunicarlo siempre antes de la firma para evitar sorpresas.",
+        "<strong>Renta turística:</strong> el propietario puede (a) ingresar al programa de gestión hotelera profesional con Xëliter, (b) gestionar la propiedad por su cuenta vía Airbnb o agencias locales, o (c) usarla 100% como segunda residencia. La elección no compromete el título.",
+        "<strong>Salida:</strong> el propietario puede vender en cualquier momento. Los costos, impuestos y beneficios CONFOTUR al revender se detallan en el Módulo 3 (Marco Legal)."
+      ]}
+    ],
+    cheat:[
+      "Ubicación: Dominicus, La Romana — 15 min del aeropuerto LRM.",
+      "Saona, Catalina, Cotubanamá — todos en el patio trasero.",
+      "Amenidades premium: piscina infinity, beach club, gym, restaurante, concierge 24/7.",
+      "Fases: ajuste típico entre fases 8–10%. Fase 1 = mejor precio.",
+      "Plusvalía proyectada: 15–25% en 24 meses post-entrega.",
+      "TIR proyectado: 8–12% neto en renta turística profesional.",
+      "Régimen de condominio: título individual + copropiedad de áreas comunes.",
+      "El marco legal completo está en el M3 dedicado."
+    ],
+    roleplays:[
+      {title:"Caso A — Cliente pregunta cuánto tarda el viaje hasta Bayahibe",
+       setup:"<strong>Respuesta modelo:</strong> 'Don Roberto, desde Punta Cana llegás en una hora por Autopista del Coral. Desde Santo Domingo en una hora y media. Pero la jugada inteligente es volar directo al aeropuerto de La Romana (LRM), que está a 15 minutos del proyecto y recibe vuelos directos desde EEUU, Canadá y Europa. Es el aeropuerto privado que usa Casa de Campo.'"},
+      {title:"Caso B — Cliente dominicano pregunta gastos comunes",
+       setup:"<strong>Respuesta modelo:</strong> 'Don Roberto, la cuota de gastos comunes cubre seguridad 24/7, mantenimiento de piscina infinity y beach club, áreas verdes, gimnasio y concierge. El monto exacto te lo paso por escrito antes de firmar — nunca dejamos eso en aire porque después aparecen sorpresas y a nadie le gustan las sorpresas en una inversión.'"},
+      {title:"Caso C — Cliente analítico pregunta plusvalía y TIR",
+       setup:"<strong>Respuesta modelo:</strong> 'Patricia, los números proyectados son: plusvalía 15–25% en los primeros 24 meses post-entrega, TIR neto 8–12% anual con gestión turística profesional. Esos números se sostienen en (a) crecimiento orgánico de Dominicus como destino, (b) ajustes de fase del proyecto y (c) escasez de oferta premium en la zona. Te paso el desglose en planilla antes de firmar.'"}
+    ],
+    quiz:"Test de 12 preguntas. Datos duros: ubicación, distancias, accesos, amenidades, fases del proyecto, plusvalía proyectada, TIR, régimen de condominio y administración."
+  },
+  {
+    code:"M3", num:3,
+    title:"Marco Legal RD · cómo se compra y se protege la inversión",
+    subtitle:"Cómo compra un extranjero · Confotur en proceso (158-01/195-13) · reserva, promesa, contrato y deslinde",
+    duration:"75–90 min",
+    jotform:"261330530069045",
+    pdf:"./pdfs/M3_Marco_Legal_RD.pdf",
+    objective:"Conocer el marco legal completo para que un dominicano o un extranjero compre propiedad en RD. Dominar la Ley CONFOTUR y los beneficios fiscales. Saber qué bancos financian a no residentes. Conocer los costos legales. Responder con seguridad las 6 preguntas legales más frecuentes. Saber cuándo escalar al departamento legal del proyecto.",
+    sections:[
+      {h:"1. ¿Puede un extranjero comprar propiedad en RD?", paragraphs:[
+        "Sí. <strong>La República Dominicana permite a los extranjeros adquirir propiedad inmobiliaria con los mismos derechos que un dominicano.</strong> No hay restricción por nacionalidad, no hay topes de superficie, no hay zonas vedadas, no se necesita residencia previa, no se necesita socio dominicano.",
+        "Esto está garantizado por la Constitución (artículos 51 y 220) y por el Código Civil dominicano. El extranjero adquiere la propiedad a título propio o a través de una sociedad RD, según le convenga fiscalmente. En ambos casos, el título sale a su nombre y se inscribe en el Registro de Títulos.",
+        "El sistema dominicano opera bajo el <strong>sistema Torrens</strong> — uno de los más sólidos del mundo: el Estado garantiza la validez del título, no se puede impugnar arbitrariamente."
+      ]},
+      {h:"2. Estructura paso a paso de la compra", paragraphs:[
+        "<strong>Paso 1 · Reserva:</strong> inicial mínima (US$2k–5k) para bloquear la unidad por 72 horas a 30 días mientras se prepara el contrato. No transfiere propiedad.",
+        "<strong>Paso 2 · Promesa de Compraventa:</strong> contrato vinculante con el desarrollador. Detalla unidad, precio, cronograma de pagos, plazos de entrega, penalidades. <strong>Inicial típica: 30% del valor.</strong>",
+        "<strong>Paso 3 · Cuotas durante construcción:</strong> el comprador paga según cronograma. Puede acelerar pagos por descuento (5–15%) o tomar financiamiento bancario.",
+        "<strong>Paso 4 · Escritura definitiva ante notario:</strong> al entregar la unidad. El notario da fe pública. Se paga el saldo restante y el ITBI 3% (exonerado si CONFOTUR).",
+        "<strong>Paso 5 · Registro de Títulos:</strong> el notario presenta los documentos. El Registro emite el Certificado de Título a nombre del comprador en 2–6 meses. Mientras tanto, el comprador tiene posesión plena."
+      ]},
+      {h:"3. CONFOTUR · Ley 158-01 de Fomento al Turismo", paragraphs:[
+        "<strong>CONFOTUR es el beneficio fiscal más importante</strong> para un inversor en zona turística calificada de RD. Si dominás esta ley, podés mostrar al cliente que su inversión rinde más en RD que en otros mercados Caribe, no solo por TIR sino por carga fiscal.",
+        "<strong>Qué exonera CONFOTUR:</strong> (1) ITBI del 3% al comprar, (2) IPI por 15 años, (3) Impuesto sobre la Renta sobre alquileres turísticos por 15 años, (4) Aranceles para materiales de construcción y equipamiento.",
+        "<strong>Cómo se verifica:</strong> no todos los proyectos en zona turística tienen CONFOTUR — el desarrollador tiene que aplicar y obtener la Resolución del Ministerio de Turismo. Antes de prometer beneficios al cliente, pedí al legal del proyecto el número de Resolución CONFOTUR (CR-XXXX-AAAA) y la fecha de vigencia.",
+        "<strong>Ahorro real para el cliente:</strong> en una unidad de US$200,000, ITBI exonerado son US$6,000 + IPI exonerado ~US$4,500 en 15 años + renta turística exenta de impuesto (~27% sobre utilidad) durante 15 años = <strong>ahorro fiscal acumulado típico de US$30,000–US$50,000</strong>."
+      ]},
+      {h:"4. DGII · identidad fiscal y forma de compra", paragraphs:[
+        "<strong>Persona física dominicana:</strong> cédula de identidad. <strong>Persona física extranjera:</strong> pasaporte vigente. Para compras puntuales, el pasaporte es suficiente al momento de la escritura.",
+        "<strong>Sociedad RD (SRL típica):</strong> se constituye ante notario, se registra en DGII y se obtiene RNC. Costos típicos: US$1,500–US$3,000.",
+        "<strong>Cuándo recomendar persona física:</strong> compra puntual, sin operación turística profesional masiva, sin estructura patrimonial complicada en país de origen. Más simple.",
+        "<strong>Cuándo recomendar sociedad RD:</strong> varias unidades, operación profesional, jurisdicciones con altos impuestos a la herencia, o si quiere protección patrimonial separada. <em>Siempre derivá a asesor fiscal del cliente para la decisión final.</em>"
+      ]},
+      {h:"5. Financiamiento bancario para no residentes", paragraphs:[
+        "<strong>Bancos que financian a no residentes:</strong> Banco Popular Dominicano, Banreservas, Banco BHD, Scotiabank Dominicana, Banco Caribe.",
+        "<strong>Condiciones típicas:</strong> inicial <strong>30–40%</strong> (vs. 20% residente), plazo 15–20 años, moneda US$, tasa variable 7–11% anual según perfil. Trámite: 4–10 semanas.",
+        "<strong>Documentación que pide el banco:</strong> pasaporte vigente, comprobante de domicilio, estados de cuenta últimos 6–12 meses, declaraciones de impuestos 2–3 años, comprobantes de ingresos, carta de referencia bancaria internacional, tasación oficial.",
+        "<strong>Nunca prometas tasa específica al cliente</strong> — solo rango general. La tasa final la define el banco según perfil."
+      ]},
+      {h:"6. El notario, la escritura y costos de cierre", paragraphs:[
+        "<strong>El notario público</strong> da fe pública, verifica gravámenes, redacta la escritura, recolecta ITBI, presenta al Registro, custodia originales.",
+        "<strong>Costos típicos de cierre:</strong> honorarios notariales 0.5–1% + ITBI 3% (exonerado CONFOTUR) + tasa Registro 0.2–0.3% + timbres US$500–US$1,500 = <strong>1.5–2% del valor de la unidad</strong> sin contar ITBI.",
+        "El <strong>Certificado de Título</strong> bajo sistema Torrens es lo que demuestra propiedad. Antes de firmar, el cliente puede pedir un <strong>Certificado de Estatus Jurídico</strong> que muestra todas las cargas registradas (lo entrega el legal del proyecto en proyectos serios)."
+      ]},
+      {h:"7. Régimen de condominio · cómo se posee la unidad", paragraphs:[
+        "Cada unidad tiene <strong>título individual e independiente</strong>. El propietario es dueño absoluto de su apartamento y copropietario indiviso de las áreas comunes según porcentaje de m².",
+        "<strong>NO es timeshare</strong> — el propietario es dueño 365 días al año. La asamblea de propietarios regula el reglamento interno.",
+        "<strong>Gastos comunes mensuales</strong> cubren mantenimiento de amenidades, seguridad, áreas verdes, concierge, fondo de reserva. El monto exacto por tipología <strong>NUNCA se inventa</strong> — pedilo al comercial y comunicalo por escrito antes de la firma."
+      ]},
+      {h:"8. Impuestos recurrentes y reventa", paragraphs:[
+        "<strong>IPI:</strong> 1% anual sobre el valor que excede US$170k aprox. Exonerado por CONFOTUR 15 años.",
+        "<strong>ITBI:</strong> 3% al comprar. Exonerado por CONFOTUR. Se paga también al revender.",
+        "<strong>Renta sobre alquileres:</strong> 27% sobre utilidad neta. Exonerado por CONFOTUR 15 años en operación turística calificada.",
+        "<strong>Plusvalía al revender:</strong> 27% sobre la ganancia ajustada por inflación. CONFOTUR aplica reglas preferenciales.",
+        "<strong>El propietario puede vender en cualquier momento</strong>, sin restricción. Costos al revender: 0.5–1% honorarios notariales + impuesto a la ganancia + comisión de broker si usa intermediario."
+      ]},
+      {h:"9. Casos especiales · cónyuges, herencia, doble tributación", paragraphs:[
+        "<strong>Compra en pareja:</strong> ambos a título individual con porcentajes, o por comunidad de bienes si están casados bajo ese régimen en RD, o por sociedad RD.",
+        "<strong>Herencia:</strong> la sucesión inmobiliaria en RD sigue la ley del país de origen del difunto si era extranjero (Convenio de La Haya). Por eso muchos inversores estructuran en sociedad RD — facilita la sucesión sin escrituración nueva.",
+        "<strong>Doble tributación:</strong> RD tiene convenios con varios países. Los ingresos tributan en RD primero (con CONFOTUR si aplica) y se reportan en el país de residencia tomando crédito fiscal."
+      ]},
+      {h:"10. Los 5 NO innegociables del vendedor", paragraphs:[
+        "<strong>1. NO dar asesoría legal personalizada por escrito.</strong> Te limitás al marco general; lo específico va a legal del proyecto.",
+        "<strong>2. NO prometer plazos, costos o beneficios fiscales sin verificación previa.</strong> Si no estás seguro, derivá.",
+        "<strong>3. NO modificar cláusulas del contrato a pedido del cliente.</strong> Las modificaciones las autoriza legal del proyecto por escrito.",
+        "<strong>4. NO cobrar al cliente honorarios legales o notariales.</strong> Esos costos los paga el cliente directamente al profesional correspondiente.",
+        "<strong>5. NO recomendar un único notario o abogado de tu círculo personal.</strong> Si el cliente pide referencia, dale 2 o 3 opciones del listado oficial del proyecto."
+      ]}
+    ],
+    cheat:[
+      "Extranjeros compran con los mismos derechos que dominicanos. Sin restricciones, sin socio local.",
+      "Estructura: Reserva → Promesa de Compraventa → Cuotas → Escritura ante notario → Registro de Títulos.",
+      "Inicial típica: 30% del valor.",
+      "<strong>CONFOTUR exonera ITBI 3% + IPI 15 años + Renta turística 15 años.</strong>",
+      "Bancos que financian a no residentes: Popular, Banreservas, BHD, Scotiabank, Banco Caribe.",
+      "Inicial para no residentes en banco: 30–40%. Plazo: 15–20 años. Tasa: 7–11% en USD.",
+      "Costos de cierre: 1.5–2% del valor (sin contar ITBI si CONFOTUR).",
+      "Régimen de condominio: título individual + copropiedad de áreas comunes.",
+      "Sistema Torrens: Estado garantiza la validez del título.",
+      "<strong>Los 5 NO:</strong> no asesorar legalmente, no prometer sin verificar, no modificar contratos, no cobrar honorarios legales, no recomendar un solo notario personal."
+    ],
+    roleplays:[
+      {title:"Caso A — Inversor extranjero pregunta múltiples cosas legales en frío",
+       setup:"Stefano, italiano, 47 años, segunda inversión RE en RD. Arranca con: '¿puedo comprar siendo italiano? ¿qué pasa con los impuestos? ¿si la pongo a nombre de mi hijo en 5 años qué pasa?'",
+       bullets:[
+         "<strong>Mejor respuesta:</strong> 'Stefano, vamos en bloques. Primero, sí, podés comprar siendo italiano con los mismos derechos que un dominicano. Sobre impuestos, depende de si comprás a título personal o por sociedad RD — esa decisión la tomás con tu contador. Pero te adelanto: The Don Dom está en zona turística calificada y la calificación CONFOTUR del proyecto está en proceso bajo la Ley 158-01/195-13; cuando se confirme exonera ITBI del 3% al comprar y renta sobre alquileres turísticos por 15 años. Sobre transferir a tu hijo en 5 años: hay varios caminos según cómo estructures la compra. Te coordino una llamada con nuestro departamento legal para tu caso específico.'"
+       ]},
+      {title:"Caso B — Cliente analítica pide due diligence",
+       setup:"CPA Patricia Henríquez, 42 años. Pregunta: '¿cómo me garantizan que la unidad está libre de gravámenes? ¿quién hace la due diligence?'",
+       bullets:[
+         "<strong>Mejor respuesta:</strong> 'Patricia, excelente pregunta. Cada unidad tiene su Certificado de Título emitido por el Estado bajo sistema Torrens, uno de los más sólidos del mundo. La due diligence formal te la entrega legal del proyecto antes de la escritura: vas a recibir el Certificado de Estatus Jurídico actualizado con toda la historia de cargas. Si querés además contratar a tu propio abogado para validarlo, te paso el listado oficial. Vas a tener todo por escrito antes de firmar.'"
+       ]},
+      {title:"Caso C — Cliente joven con miedo a la hipoteca",
+       setup:"Felipe Báez, 33, ingeniero. Dice: 'me dijeron que como no soy residente los bancos cobran 12% y piden 50% de inicial, ¿es así?'",
+       bullets:[
+         "<strong>Mejor respuesta:</strong> 'Felipe, escuchaste un dato exagerado. Te paso el real: los bancos que financian a no residentes son Popular, Banreservas, BHD, Scotiabank y Banco Caribe. Inicial 30–40% (no 50%). Tasa variable 7–11% en dólares según tu perfil (no fijo 12%). Plazo 15–20 años. Si querés, antes de la reserva te coordino una reunión con el banco para que tengas la pre-aprobación y los números exactos de tu caso.'"
+       ]}
+    ],
+    quiz:"Test de 30 preguntas + 3 abiertas. Cubre: derechos del extranjero, estructura paso a paso, CONFOTUR completo, DGII, bancos que financian, costos de cierre, régimen de condominio, impuestos recurrentes, reventa, casos especiales, los 5 NO y respuestas modelo para las 6 preguntas legales más frecuentes. Mínimo aprobado: 75%."
+  },
+  {
+    code:"M4", num:4,
+    title:"Permisología y Estado del Proyecto",
+    subtitle:"Caso S01-25-02408 · aprobaciones técnicas, planos sellados, deslinde finalizado y estado real de obra",
+    duration:"75 min",
+    jotform:"261330641709049",
+    pdf:"./pdfs/M4_Permisologia_y_Estado_del_Proyecto.pdf",
+    objective:"Conocer las 6 fases del proceso de permisología en RD y dónde está parado The Don Dom hoy. Saber qué autoridades intervienen, entender el deslinde al 90%, citar los datos catastrales oficiales (Parcela 23, DC 10.2, 36,657 m²) y responder con seguridad cuándo arranca la obra.",
+    sections:[
+      {h:"1. Qué es la permisología en RD", paragraphs:[
+        "La permisología es el conjunto de autorizaciones, licencias y aprobaciones que un proyecto inmobiliario obtiene de las autoridades dominicanas competentes antes de construir y operar. En RD es un proceso público, riguroso y verificable — todo expediente queda registrado y cualquier ciudadano puede consultarlo.",
+        "<strong>El vendedor profesional tiene que dominar este tema.</strong> Es la primera duda real de cualquier inversor serio. El cliente analítico no compra una promesa: compra un proyecto con expedientes oficiales en curso. El que sabe contar el estado regulatorio con números y autoridades específicas, cierra. El que improvisa, no cierra."
+      ]},
+      {h:"2. Las 5 autoridades que intervienen", paragraphs:[
+        "<strong>Ayuntamiento de San Rafael del Yuma (Ayto. SRY)</strong> — emite la Constancia de Uso de Suelo, No Objeción Municipal, Aprobación del Plan Maestro y la Licencia de Construcción final.",
+        "<strong>Ministerio de Medio Ambiente (MARN)</strong> — categoriza el proyecto, revisa el Estudio de Impacto Ambiental (EIA/PMAA), gestiona la audiencia pública con la comunidad y emite la Resolución Ambiental.",
+        "<strong>MOPC + Cuerpo de Bomberos</strong> — aprueban planos arquitectónicos, estructurales, hidráulicos y eléctricos. Bomberos verifica cumplimiento de seguridad contra incendios.",
+        "<strong>MITUR + CONFOTUR</strong> — aprueban turísticamente el proyecto y otorgan los incentivos fiscales bajo Ley 158-01 modificada por Ley 195-13.",
+        "<strong>CORAA + EDEESTE</strong> — CORAA habilita conexión de agua y alcantarillado; EDEESTE habilita la conexión eléctrica."
+      ]},
+      {h:"3. Estado actual del proyecto · Mayo 2026", paragraphs:[
+        "<strong>Cronograma total: 18 meses. Avance actual: ~50% del recorrido completado.</strong>",
+        "<strong>ETAPA ACTUAL: Resolución Ambiental MARN en curso · caso S01-25-02408.</strong>",
+        "Hemos completado los pre-requisitos técnicos, las aprobaciones municipales y la fase ambiental hasta la audiencia pública. Actualmente avanzamos en <strong>5 vías paralelas</strong> — municipal, ambiental, técnica (MOPC), turística (MITUR + CONFOTUR Ley 195-13) y servicios públicos — con el objetivo de habilitar el inicio de obra al cumplirse el horizonte planificado.",
+        "El paralelismo es clave: cada autoridad trabaja en su propia vía con un responsable independiente. Eso optimiza tiempos vs. el modelo secuencial que retrasaría todo de 24 a 36 meses."
+      ]},
+      {h:"4. Las 6 fases del cronograma", paragraphs:[
+        "<strong>FASE 0 · Pre-requisitos técnicos · COMPLETADO.</strong> Título de propiedad, anteproyecto arquitectónico, estudio de suelos. Equipo interno + CODIA.",
+        "<strong>FASE I · Aprobaciones Municipales · COMPLETADO.</strong> Constancia de Uso de Suelo (F1.1), No Objeción Municipal (F1.2), Aprobación del Plan Maestro >5,000 m² (F1.3). Todo aprobado por el Ayuntamiento de San Rafael del Yuma.",
+        "<strong>FASE II · Gestión Ambiental MARN · EN PROCESO.</strong> Categorización Ambiental ✓, Estudio de Impacto Ambiental EIA/PMAA ✓, Audiencia Pública (Cat. B) ✓, Resolución Ambiental EN CURSO (<strong>caso S01-25-02408</strong>).",
+        "<strong>FASE III · Aprobaciones Técnicas MOPC + Bomberos · EN PROCESO.</strong> Planos arquitectónicos/estructurales/hidráulicos/eléctricos en revisión + aprobación del Cuerpo de Bomberos.",
+        "<strong>FASE IV · Aprobaciones Turísticas MITUR + CONFOTUR · EN PROCESO.</strong> Aprobación turística MITUR + solicitud de incentivos fiscales bajo Ley 195-13.",
+        "<strong>FASE V · Servicios Públicos · PLANIFICADO.</strong> Agua y alcantarillado por CORAA; energía eléctrica por EDEESTE.",
+        "<strong>FASE VI · Licencia de Construcción · PLANIFICADO.</strong> Autorización formal final del Ayuntamiento que habilita el inicio de obra."
+      ]},
+      {h:"5. El Deslinde · 90% completado", paragraphs:[
+        "El deslinde es el proceso legal por el cual se determina la superficie y ubicación exacta de un terreno, se valida la cadena de títulos, se notifica a colindantes y se obtiene el <strong>Certificado de Título individual</strong> emitido por el Estado dominicano.",
+        "<strong>The Don Dom completó 3 de las 4 fases del deslinde y tiene la mensura aprobada</strong> por la Dirección Regional de Mensuras Catastrales del Departamento Este. Solo queda la última etapa ante el Registro de Títulos para emisión del Certificado de Título individual.",
+        "<strong>Fases completadas:</strong> Recopilación y Análisis ✓, Operaciones de Campo (Red Geodésica GNSS, levantamiento RTK, citación a colindantes) ✓, Procesamiento y Piezas Técnicas (cálculo de poligonal, plano individual y general, memoria descriptiva) ✓.",
+        "<strong>Fase IV en curso:</strong> Aprobación de Mensura ✓ APROBADA el 20 de abril de 2026 (Expediente 6642026025390, firmado por Agrim. Claudio Batista Rosario). Trámite ante Registro de Títulos en proceso."
+      ]},
+      {h:"6. Datos catastrales oficiales del terreno", paragraphs:[
+        "<strong>Estos son los datos exactos que figuran en la Resolución de Mensuras Catastrales aprobada.</strong> El vendedor profesional debe tenerlos memorizados — no son secretos, son la prueba de que el proyecto es real, físico y registrado ante el Estado.",
+        "<strong>Designación catastral de origen:</strong> Parcela No. 23, Distrito Catastral No. 10.2.",
+        "<strong>Designación Catastral Posicional:</strong> 501289411520.",
+        "<strong>Superficie aprobada:</strong> 36,657.00 m² (3.66 hectáreas).",
+        "<strong>Ubicación:</strong> Av. Las Lagunas, ~85 metros al sur de la Carretera de Bayahibe · Dominicus · Sección Bayahibe · Municipio San Rafael del Yuma · Provincia La Altagracia.",
+        "<strong>Profesional habilitado del deslinde:</strong> Agrim. Joaquín Miguel Florian Rodriguez, CODIA No. 40186.",
+        "<strong>Vendedor inscrito:</strong> DOMINICUS AMERICANUS FIVE STAR, S.A. (RNC 101149108).",
+        "<strong>Marco legal:</strong> Ley 108-05 de Registro Inmobiliario + Reglamento General de Mensuras Catastrales."
+      ]},
+      {h:"7. El caso ambiental S01-25-02408", paragraphs:[
+        "<strong>Es el número de expediente del MARN para la Resolución Ambiental del proyecto.</strong> Identificarlo y mencionarlo por número al cliente analítico es lo que cierra una conversación legal seria.",
+        "<strong>Qué cubre la Resolución Ambiental:</strong> validación del EIA/PMAA, aprobación de medidas de mitigación, condicionantes del MARN (aguas, residuos, vegetación, fauna, costa), Plan de Manejo y Adecuación Ambiental obligatorio, Tarjeta de Identificación Ambiental.",
+        "<strong>Por qué ya pasamos lo más difícil:</strong> la audiencia pública (Cat. B) — el momento donde la comunidad puede objetar formalmente — está completada. Es históricamente la etapa que más demoras genera. La Resolución es la formalidad técnica de cierre del MARN."
+      ]},
+      {h:"8. Cómo responder al cliente con seguridad", paragraphs:[
+        "<strong>¿El proyecto tiene permisos?</strong> → \"Sí. Municipales completadas (Constancia Uso de Suelo, No Objeción, Plan Maestro). Fase ambiental: EIA + audiencia pública completadas; Resolución Ambiental en curso (caso S01-25-02408). En paralelo avanzan 4 frentes más. Te paso el cronograma y los expedientes para que valides con tu abogado.\"",
+        "<strong>¿Cuándo arranca la obra?</strong> → \"Cronograma de 18 meses. Estamos al 50%. El inicio se habilita al completar las 6 fases. Trabajamos en paralelo para optimizar tiempos.\"",
+        "<strong>¿Cómo sé que el terreno es real?</strong> → \"Parcela 23, DC 10.2, 36,657 m² en Dominicus. DCP 501289411520. Deslinde aprobado por Mensuras Catastrales el 20/04/2026 (Expediente 6642026025390). A un paso del Certificado de Título individual. Te paso los planos para que tu abogado los revise.\"",
+        "<strong>¿Qué pasa si la Resolución Ambiental no sale?</strong> → \"La audiencia pública (la etapa de mayor riesgo) ya está completada. La Resolución es el cierre técnico del MARN. Expediente activo: S01-25-02408. La inversión se hace bajo cláusulas contractuales que cubren cualquier escenario.\""
+      ]},
+      {h:"9. Los 5 NO innegociables del vendedor", paragraphs:[
+        "<strong>1. NO inventar fechas exactas de aprobaciones.</strong> Plazos administrativos variables. Si no sabés, derivá.",
+        "<strong>2. NO menospreciar el proceso ambiental.</strong> MARN es autoridad seria; la audiencia pública es la prueba de filtro comunitario. Nunca digas \"es trámite\".",
+        "<strong>3. NO prometer plazos del Registro de Títulos.</strong> Decí \"entre 2 y 6 meses típicamente\" y verificá.",
+        "<strong>4. NO comprometer al proyecto con afirmaciones técnicas sobre planos.</strong> Derivá al arquitecto.",
+        "<strong>5. NO entregar copia del expediente ambiental ni planos firmados al cliente</strong> antes del momento contractual correspondiente."
+      ]}
+    ],
+    cheat:[
+      "Cronograma: 18 meses. Avance actual: ~50%.",
+      "Etapa actual: Resolución Ambiental MARN en curso.",
+      "<strong>Caso ambiental: S01-25-02408.</strong>",
+      "Deslinde aprobado: 20/04/2026 · Expediente 6642026025390.",
+      "Parcela 23, DC 10.2 · DCP 501289411520 · 36,657 m² · Dominicus.",
+      "6 fases: Pre-requisitos ✓ · Municipal ✓ · Ambiental (en curso) · Técnica · Turística · Servicios · Licencia.",
+      "Profesional deslinde: Agrim. Joaquín Miguel Florian Rodriguez, CODIA 40186.",
+      "Vendedor inscrito: DOMINICUS AMERICANUS FIVE STAR, S.A. (RNC 101149108).",
+      "Marco: Ley 108-05 + Ley 158-01/195-13 (CONFOTUR)."
+    ],
+    roleplays:[
+      {title:"Caso A — Inversora analítica pide estado del cronograma",
+       setup:"CPA Patricia Henríquez, 42, llega con planilla. Pregunta directo: \"¿En qué punto exacto del cronograma está el proyecto?\"",
+       bullets:[
+         "<strong>Mejor respuesta:</strong> \"Patricia, te paso datos. Cronograma 18 meses, estamos al 50%. Completadas: aprobaciones municipales del Ayto. SRY, categorización ambiental, EIA y audiencia pública. Etapa actual: Resolución Ambiental MARN, expediente S01-25-02408. En paralelo MOPC+Bomberos, MITUR+CONFOTUR y deslinde con Registro de Títulos. Te paso el cronograma actualizado y los expedientes.\""
+       ]},
+      {title:"Caso B — Extranjero valida que el terreno es real",
+       setup:"Stefano, 47, italiano. Quiere validar antes de seguir hablando.",
+       bullets:[
+         "<strong>Mejor respuesta:</strong> \"Stefano, datos oficiales: Parcela 23, DC 10.2, 36,657 m². DCP 501289411520. Mensura aprobada por Mensuras Catastrales del Departamento Este, expediente 6642026025390, 20/04/2026, firmada por Agrim. Claudio Batista Rosario. A un paso del Certificado de Título individual. Te paso el plano general y el individual.\""
+       ]},
+      {title:"Caso C — Cliente nervioso con medio ambiente",
+       setup:"Doña Carolina, 38, médica. Oyó comentarios sobre \"problemas ambientales\" en proyectos de la zona.",
+       bullets:[
+         "<strong>Mejor respuesta:</strong> \"Carolina, te respondo con datos. La Resolución Ambiental es el cierre técnico del MARN — la etapa de mayor riesgo era la audiencia pública, y eso está completado. Expediente activo: S01-25-02408. Si querés, coordinamos llamada con nuestro departamento legal o con tu abogado.\""
+       ]}
+    ],
+    quiz:"Test de ~30 preguntas + 3 abiertas. Cubre las 5 autoridades, las 6 fases en orden, status actual con caso S01-25-02408, las 4 fases del deslinde, datos catastrales oficiales, los 5 NO del vendedor y respuestas modelo para las 4 preguntas más frecuentes. Mínimo aprobado: 75%."
+  },
+  {
+    code:"M5", num:5,
+    title:"Tipologías de apartamentos",
+    subtitle:"Studio A · 1BR C · 2BR E/F/Flex — renders Cuarto Interior y perfil de comprador por tipología",
+    duration:"60 min",
+    jotform:"261331033843044",
+    pdf:"./pdfs/M5_Tipologias_Apartamentos.pdf",
+    objective:"Saber de memoria cada tipología disponible en The Don Dom, asociarla a un perfil de comprador ideal y a un argumento comercial específico. La diferencia entre un vendedor amateur y un profesional es que el segundo NO ofrece la unidad incorrecta al cliente incorrecto.",
+    sections:[
+      {h:"1. Lógica de tipologías", paragraphs:[
+        "The Don Dom tiene un catálogo de tipologías diseñado para cubrir tres perfiles de compra distintos: (a) <strong>inversor puro</strong> que busca máximo TIR (estudios y 1 habitación), (b) <strong>inversor familiar</strong> que mezcla uso propio + renta (2 habitaciones), (c) <strong>comprador patrimonial</strong> que busca pieza única con uso prioritario propio (penthouse / ático).",
+        "Cada tipología tiene un comprador ideal. Tu trabajo en la primera reunión es descubrir cuál de los tres perfiles tenés adelante y NO ofrecer la unidad incorrecta. Ofrecer un penthouse a un inversor puro = perdiste la reunión. Ofrecer un estudio a una familia con dos hijos = perdiste la reunión."
+      ]},
+      {h:"2. Estudio (45–50 m²) · desde US$125k", paragraphs:[
+        "<strong>Características:</strong> ambiente integrado, sala-comedor-cocina + dormitorio, 1 baño, balcón. La opción más eficiente del proyecto para renta turística pura — la unidad de mayor rotación.",
+        "<strong>Rango de precio referencial fase 1:</strong> desde US$125,000–US$135,000 según vista y piso.",
+        "<strong>Comprador ideal:</strong> inversor puro. Soltero o pareja sin hijos, profesional joven o pre-jubilado que busca activo que se pague solo. Renta turística esperada US$1,400–US$1,800 mensual promedio según temporada.",
+        "<strong>Argumento comercial clave:</strong> '<em>Es la unidad que más se mueve. Ocupación alta porque los huéspedes turísticos casi nunca son grupos grandes — el estudio es lo más demandado en plataformas como Airbnb en la zona de Bayahibe.</em>'"
+      ]},
+      {h:"3. 1 habitación (65–75 m²) · US$165–210k", paragraphs:[
+        "<strong>Características:</strong> sala-comedor independiente, cocina separada o abierta, 1 dormitorio principal con baño en suite, 1 baño social, balcón con vista.",
+        "<strong>Rango de precio referencial fase 1:</strong> US$165,000–US$210,000 según vista (parcial al mar, vista al mar directa, frente al mar).",
+        "<strong>Comprador ideal:</strong> inversor mixto. Profesional dominicano que va a usar la unidad 4–8 semanas al año y rentarla el resto, o inversor extranjero que la usa para vacaciones largas y la renta el resto del año.",
+        "<strong>Argumento comercial clave:</strong> '<em>La tipología que más balancea uso personal con rentabilidad. Te entra el segmento turístico de pareja y el de viajero individual que paga más por más espacio.</em>'"
+      ]},
+      {h:"4. 2 habitaciones (85–110 m²) · US$215–295k", paragraphs:[
+        "<strong>Características:</strong> sala-comedor amplia, cocina integrada o cerrada, 2 dormitorios (uno principal con baño en suite + secundario), 2 baños, balcón generoso. Algunas variantes con cuarto de servicio.",
+        "<strong>Rango de precio referencial fase 1:</strong> US$215,000–US$295,000 según m², vista y piso.",
+        "<strong>Comprador ideal:</strong> familia profesional dominicana o extranjera. Padres con uno o dos hijos. Uso vacacional principal + renta complementaria.",
+        "<strong>Argumento comercial clave:</strong> '<em>Es la unidad que se siente casa. Tus padres, tu hermano y tu hijo caben sin sentirse encerrados. Y cuando la rentás, recibís familias completas — son los huéspedes que más cuidan la propiedad y dejan reviews de 5 estrellas.</em>'"
+      ]},
+      {h:"5. Penthouse / Ático (130–150 m²) · US$350–400k", paragraphs:[
+        "<strong>Características:</strong> planta superior con terraza propia ampliada, vista panorámica al mar, 2 o 3 dormitorios, doble baño, espacios premium con acabados diferenciados.",
+        "<strong>Rango de precio referencial fase 1:</strong> US$350,000–US$400,000.",
+        "<strong>Comprador ideal:</strong> comprador patrimonial. Empresario o profesional senior con capacidad de compra alta que prioriza uso propio y prestigio sobre TIR puro. Es la unidad 'última'.",
+        "<strong>Argumento comercial clave:</strong> '<em>En cada edificio hay solo dos. Las primeras que se venden son las que el propietario menos quiere soltar. Si entrás en fase 1, entrás con primera opción de elección.</em>'"
+      ]},
+      {h:"6. Reglas de oro al ofrecer tipologías", paragraphs:[
+        "<strong>Preguntá primero, ofrecé después.</strong> Antes de mostrar planos, descubrí: ¿cómo gana plata?, ¿cuántas veces al año va a venir?, ¿con quién va a venir?, ¿es su primera inversión inmobiliaria?",
+        "<strong>Si el cliente dice 'no sé bien qué busco'</strong>, NO le muestres todo el catálogo. Hacele 3 preguntas más y reducí a UNA recomendación. La parálisis por opciones mata cierres.",
+        "<strong>Nunca ofrezcas tres tipologías de precio distinto en la misma reunión.</strong> Ofrecé dos. La tercera opción la guardás para la segunda reunión si hay objeción."
+      ]}
+    ],
+    cheat:[
+      "Estudio (45–50 m²): inversor puro. Desde US$125k.",
+      "1 hab (65–75 m²): inversor mixto. US$165–210k.",
+      "2 hab (85–110 m²): familia. US$215–295k.",
+      "Penthouse (130–150 m²): patrimonial. US$350–400k.",
+      "<strong>Regla de oro:</strong> descubrí perfil ANTES de mostrar planos.",
+      "Máximo 2 tipologías de precio distinto por reunión."
+    ],
+    roleplays:[
+      {title:"Caso A — Cliente indeciso entre estudio y 1 habitación",
+       setup:"Carolina, 38, médica de Santiago, casada con 2 hijos chicos. Te dice 'estoy entre el estudio que rinde más o el de 1 habitación que es más cómodo si vengo con mi familia'.",
+       bullets:[
+         "<strong>Diagnóstico:</strong> NO es inversor puro. Es inversor mixto. El estudio está mal porque su familia no entra. La oferta correcta es 1 habitación con buen TIR, o saltar a 2 habitaciones si presupuesto alcanza.",
+         "<strong>Pregunta clave:</strong> '¿Cuántas veces al año vienen con los niños y por cuántas noches?' Si responde 4–8 semanas → 1 habitación. Si responde >10 semanas → 2 habitaciones."
+       ]},
+      {title:"Caso B — Cliente con presupuesto top pidiendo recomendación",
+       setup:"Empresario que dice 'me da igual la rentabilidad, quiero la mejor unidad'. Tu tarea: ofrecer penthouse pero NO empezar por el precio.",
+       bullets:[
+         "<strong>Frase de apertura sugerida:</strong> 'En cada edificio del proyecto hay solo dos áticos. Los compran personas que vienen a usarla más que a rentarla. Te muestro la unidad y después hablamos de precio.'"
+       ]}
+    ],
+    quiz:"Test de 12 preguntas. Asociación tipología ↔ perfil de comprador, rangos de precio referenciales, m² por tipología, criterios de descubrimiento."
+  },
+  {
+    code:"M6", num:6,
+    title:"Island Houses — el concepto de vida en la isla",
+    subtitle:"Villas premium 228m² · versión Cuarto Interior V3 · jardín privado y carrito eléctrico incluido",
+    duration:"45 min",
+    jotform:"261330500488047",
+    pdf:"./pdfs/M6_Island_Houses_Concepto.pdf",
+    objective:"Entender el concepto Island Houses como producto distinto al apartamento tradicional, posicionarlo correctamente frente al cliente que busca lifestyle por sobre m² puros, y manejar la pregunta '¿por qué Island House y no apartamento estándar?'.",
+    sections:[
+      {h:"1. Qué es una Island House", paragraphs:[
+        "Una <strong>Island House</strong> dentro de The Don Dom La Isla es una unidad concebida bajo la lógica de 'casa-villa' más que de 'apartamento'. Privacidad ampliada, áreas exteriores integradas, lógica horizontal frente a la vertical del edificio tradicional, conexión directa con paisajismo, jardín privado o piscina propia según tipología.",
+        "El comprador de una Island House no está comparando metros cuadrados con un apartamento. Está comparando <strong>estilo de vida</strong>. El que vende esto bien deja de hablar de m² y empieza a hablar de mañanas, atardeceres, asados con la familia y el sonido del mar al lado de la cama."
+      ]},
+      {h:"2. Por qué Island House y no apartamento", paragraphs:[
+        "<strong>Privacidad.</strong> En una Island House no compartís pasillo con vecinos directos. La unidad se siente como villa.",
+        "<strong>Áreas exteriores integradas.</strong> Patio, jardín o piscina privada. Eso elimina la necesidad de bajar a la piscina común si no querés — pero la piscina común está cuando la querés.",
+        "<strong>Storytelling.</strong> El comprador que recibe gente en su casa de playa quiere mostrar algo único. La Island House se cuenta distinto en la sobremesa.",
+        "<strong>Posición frente al paisajismo.</strong> Las Island Houses están pensadas como el primer toque que recibe el visitante del proyecto — la arquitectura y el paisajismo de Cuarto Interior se concentra acá."
+      ]},
+      {h:"3. Quién compra una Island House", paragraphs:[
+        "<strong>Comprador patrimonial</strong> principalmente. Empresario familiar, profesional senior, ejecutivo que quiere casa de playa que no se sienta condominio.",
+        "<strong>Familia profesional dominicana del exterior</strong> que viene varias veces al año con padres y hermanos y necesita 'casa de campo en la playa'.",
+        "<strong>Inversor de alta gama</strong> que mezcla uso propio prioritario + renta selectiva en temporada alta (menor ocupación, mayor ticket por noche)."
+      ]},
+      {h:"4. Cómo se vende una Island House", paragraphs:[
+        "<strong>Tour físico siempre que se pueda.</strong> La Island House se vende cuando el cliente pisa el espacio exterior. Si no podés llevarlo, video walkthrough con audio del mar de fondo — ese audio sella la decisión emocional.",
+        "<strong>Palabras clave:</strong> 'villa', 'lifestyle', 'horizontal', 'jardín privado', 'tu casa-villa frente al mar Caribe'. Evitar 'apartamento más grande' — ese encuadre destruye el premium.",
+        "<strong>Comparativa explícita con apartamentos tradicionales:</strong> '<em>En Cap Cana, una villa equivalente cuesta el doble que esta Island House. En Casa de Campo, ni hablar. Esta unidad es el primer producto en RD que ofrece vida-villa a precio de apartamento premium.</em>'"
+      ]}
+    ],
+    cheat:[
+      "Island House ≠ apartamento grande. Es concepto villa.",
+      "Privacidad + áreas exteriores integradas + horizontalidad.",
+      "Comprador típico: patrimonial / familia profesional / inversor alta gama.",
+      "Palabras: villa, lifestyle, horizontal, jardín privado.",
+      "Frase: 'vida-villa a precio de apartamento premium'.",
+      "Cierre: 'te subís al barrio de Casa de Campo sin pagar el ticket del barrio'."
+    ],
+    roleplays:[
+      {title:"Caso A — Cliente pregunta '¿qué diferencia hay con un apartamento de 2 hab?'",
+       setup:"<strong>Respuesta modelo:</strong> 'Buena pregunta. La diferencia no son los m² — la diferencia es cómo se siente vivir ahí. La Island House es horizontal, tiene patio o jardín propio, no compartís pasillo con nadie. Es una villa con respaldo de un proyecto premium. Vení te muestro: la diferencia se entiende caminando, no en plano.'"},
+      {title:"Caso B — Cliente compara con Casa de Campo",
+       setup:"Cliente dice 'pero si quiero villa, ¿por qué no Casa de Campo?'. <strong>Respuesta:</strong> 'Una villa en Casa de Campo entra desde US$1.5M para arriba. Una Island House en The Don Dom te da el lifestyle villa, vecino a Casa de Campo, por una fracción. Es la jugada inteligente: te subís al barrio sin pagar el ticket del barrio.'"}
+    ],
+    quiz:"Test de 10 preguntas. Concepto Island House, diferencias clave con apartamento estándar, perfil de comprador, manejo de comparación con Casa de Campo."
+  },
+  {
+    code:"M7", num:7,
+    title:"Cuarto Interior — Interiorismo y paisajismo",
+    subtitle:"Estudio de Madrid · concepto contemporáneo caribeño · sello de calidad para el comprador",
+    duration:"60 min",
+    jotform:"261330773221044",
+    pdf:"./pdfs/M7_Cuarto_Interior_Interiorismo.pdf",
+    objective:"Tener la historia de Cuarto Interior memorizada con datos concretos. Saber explicar por qué tener un estudio de Madrid con portafolio de hoteles europeos diseñando The Don Dom es un diferencial real frente al 99% de los proyectos de la zona.",
+    sections:[
+      {h:"1. Quién es Cuarto Interior", paragraphs:[
+        "<strong>Estudio de interiorismo y arquitectura fundado en Madrid en 2003.</strong> Fundadores: Germán Álvarez (Director Creativo) y José Manuel Fernández (Director Ejecutivo). Sede en Calle de San Vicente Ferrer 61, Madrid.",
+        "Es un estudio especializado en <strong>hospitalidad de lujo, gastronomía y residencias de alto nivel</strong>. Su firma es ese estilo que se reconoce a primera vista: maderas nobles, materiales naturales, iluminación cuidada, piezas únicas, atmósfera cálida que no se siente fría como otros estudios minimalistas.",
+        "<strong>Frase de presentación que usamos siempre:</strong> '<em>Cuarto Interior — los mismos diseñadores que firmaron el Mondrian Ibiza, el Hyde Ibiza, el Hard Rock Marbella y el Casino Gran Madrid — está detrás de los espacios de The Don Dom.</em>'"
+      ]},
+      {h:"2. Portfolio de proyectos icónicos", paragraphs:[
+        "<strong>Mondrian Hotel Ibiza</strong> — hotel boutique de lujo en Ibiza (cadena Accor / Ennismore).",
+        "<strong>Hyde Hotel Ibiza</strong> — proyecto hermano del Mondrian, mismo grupo, lifestyle hotel.",
+        "<strong>Hard Rock Hotel Marbella</strong> — uno de los Hard Rock más reconocidos de Europa.",
+        "<strong>Casino Gran Madrid</strong> — el casino emblemático de la capital española.",
+        "<strong>Hotel VP Plaza de España Design</strong> — Madrid, frente a la Plaza de España, hotel premium.",
+        "<strong>Hotel Urso</strong> — boutique hotel 5 estrellas en Madrid.",
+        "<strong>Hotel Indigo Tirol Madrid, Hotel Vincci Capitol, Hotel Regente Gran Vía Madrid, Hotel Roomate Gorka, Mante House Apartments</strong> — desarrollos hospitality y residencial.",
+        "<strong>Restaurantes y clubs:</strong> Roto Ibiza, Restaurante Rocacho, Café Saigón Madrid, Chango Club, Monocle Club, Blackhaus, Gunilla, Barceló Theater Club, Azotea Círculo de Bellas Artes Madrid.",
+        "<strong>Residencias privadas:</strong> Villa Navas del Marqués, Madrid Apartment y Penthouse Schaefer."
+      ]},
+      {h:"3. Servicios que aporta a The Don Dom", paragraphs:[
+        "<strong>Diseño de interiores residencial y hospitality</strong> (su especialidad principal).",
+        "<strong>Diseño de mobiliario único</strong> — piezas exclusivas pensadas para cada proyecto, no catálogo genérico.",
+        "<strong>Consultoría de iluminación</strong> — la luz es lo que hace que una propiedad parezca cara o barata; acá está controlada por especialistas.",
+        "<strong>Paisajismo y landscaping</strong> — la cara exterior del proyecto, jardines, áreas comunes.",
+        "<strong>Consultoría de arte</strong> — selección curada de piezas que terminan de cerrar el ambiente.",
+        "<strong>Branding y dirección creativa</strong> — la identidad gráfica y conceptual del proyecto."
+      ]},
+      {h:"4. Cómo eso se traduce en argumento de venta", paragraphs:[
+        "<strong>Frase #1:</strong> '<em>Cuando entrés a tu apartamento en The Don Dom y enciendas la luz, esa luz fue calculada por la misma gente que iluminó el Hotel Mondrian de Ibiza. Eso no se ve en plano, pero se siente desde el primer minuto.</em>'",
+        "<strong>Frase #2:</strong> '<em>La diferencia entre un proyecto bonito y un proyecto memorable son los detalles. En The Don Dom esos detalles los firmó un estudio que cobra para diseñar hoteles 5 estrellas en Europa. Es valor que ya viene incorporado al precio.</em>'",
+        "<strong>Frase #3 (cuando el cliente compara con proyecto vecino):</strong> '<em>El 99% de los proyectos en la zona contratan al interiorista local más barato. Acá trajeron a Madrid para una razón: la valuación post-entrega depende de la firma. Una unidad firmada por Cuarto Interior se diferencia el día que vayas a venderla.</em>'"
+      ]},
+      {h:"5. Lo que NO hay que decir", paragraphs:[
+        "<strong>No decir 'es un decorador'.</strong> Cuarto Interior es estudio de arquitectura interior, no decoración. Decir 'decorador' baja la marca.",
+        "<strong>No prometer renders que no hayas visto.</strong> Si un cliente te pide ver renders firmados, pedilos al departamento de marketing — no inventes.",
+        "<strong>No comparar con marcas que no conocés.</strong> Si un cliente menciona otro interiorista, no opines mal; mantené el foco en el portafolio europeo de Cuarto Interior."
+      ]}
+    ],
+    cheat:[
+      "Cuarto Interior: estudio de Madrid, fundado 2003.",
+      "Fundadores: Germán Álvarez (creativo) + José Manuel Fernández (ejecutivo).",
+      "Proyectos icónicos: Mondrian Ibiza, Hyde Ibiza, Hard Rock Marbella, Casino Gran Madrid.",
+      "Servicios: interiorismo, mobiliario exclusivo, iluminación, paisajismo, arte, branding.",
+      "Frase: 'la valuación post-entrega depende de la firma'."
+    ],
+    roleplays:[
+      {title:"Caso A — Cliente pregunta '¿quién diseñó esto?'",
+       setup:"<strong>Respuesta modelo lista para usar:</strong> 'El estudio se llama Cuarto Interior. Es de Madrid, fundado en 2003. Su portafolio incluye el Mondrian de Ibiza, el Hyde Ibiza, el Hard Rock Marbella, el Casino Gran Madrid, el Hotel VP Plaza de España. Te dejo el link al portfolio: <a href=\"https://www.cuartointerior.com/\" target=\"_blank\" rel=\"noopener\">cuartointerior.com</a> — vas a entender por qué importa.'"},
+      {title:"Caso B — Cliente compara con otro proyecto que tiene 'diseño italiano'",
+       setup:"<strong>Respuesta modelo:</strong> 'Buen punto. En The Don Dom tenés diseño europeo en dos capas: Cuarto Interior firma la arquitectura interior y el paisajismo, y Arancucine/Rastelli aporta el equipamiento italiano de la cocina. Las dos firmas detrás de los hoteles y residencias más reconocidas de Europa y EEUU. Es valor compuesto.'"}
+    ],
+    quiz:"Test de 12 preguntas. Datos de Cuarto Interior (año, fundadores, proyectos), servicios al proyecto, frases de venta, comparación con competidores."
+  },
+  {
+    code:"M8", num:8,
+    title:"Arancucine + Rastelli — Equipamiento Made in Italy",
+    subtitle:"Cocinas Arancucine + baños Rastelli, italianos — premium europeo a precio caribeño",
+    duration:"60 min",
+    jotform:"261330501314036",
+    pdf:"./pdfs/M8_Arancucine_Rastelli_Equipamiento.pdf",
+    objective:"Entender por qué traer Arancucine + Rastelli al proyecto es una jugada de marca que pocos competidores pueden igualar, y saber traducir esa marca al cliente que pregunta '¿qué tan buena es esa cocina?'",
+    sections:[
+      {h:"1. Quién es Renzo Rastelli y qué es ARAN", paragraphs:[
+        "<strong>Renzo Rastelli</strong> es el empresario italiano detrás de <strong>ARAN World</strong>, un grupo industrial fundado en <strong>1962</strong>, con sede en <strong>Atri (Abruzzo, Italia)</strong>, que se transformó en una de las marcas más reconocidas mundialmente de cocinas y mobiliario italiano. Dos líneas de producto principales: <strong>Rastelli Design</strong> y <strong>Aran Cucine Italia</strong>.",
+        "ARAN World es 'Made in Italy' en su sentido más completo: producción en Abruzzo, materiales premium, colaboración con los diseñadores top del mundo. Hoy es una marca con presencia retail en USA (Los Angeles, Manhattan, Hallandale) y proyectos en más de <strong>120 países</strong>."
+      ]},
+      {h:"2. Aran Contract — el departamento de proyectos", paragraphs:[
+        "<strong>Aran Contract</strong> es el brazo de proyectos del grupo: la división que ha equipado <strong>más de 700 torres en 120 países</strong>, incluyendo algunos de los rascacielos más icónicos del mundo. Tiene <strong>30 ingenieros, 28 diseñadores y 20 project managers</strong> dedicados, cada uno asignado al cliente durante toda la duración del proyecto.",
+        "Esto es lo que diferencia a Aran Contract de un proveedor de cocinas estándar: equipo de ingeniería interno que diseña a medida + producción italiana + project management dedicado."
+      ]},
+      {h:"3. Portafolio Aran Contract — los proyectos que importan al cliente", paragraphs:[
+        "<strong>One Wall Street, Nueva York</strong> — uno de los desarrollos residenciales más prestigiosos del Lower Manhattan.",
+        "<strong>432 Park Avenue, Nueva York</strong> — el edificio residencial supertall icónico de la Park Avenue.",
+        "<strong>125 Greenwich Street, Nueva York</strong> — desarrollo residencial premium en TriBeCa.",
+        "<strong>200 East 59th Street, Nueva York</strong> — torre residencial de lujo en Midtown East.",
+        "<strong>520 5th Avenue, 20 East End Avenue, The Vandewater, Kubo House (Karim Rashid)</strong> — todos en Nueva York.",
+        "<strong>One Museum Square, Los Angeles</strong> — torre residencial premium en LA.",
+        "<strong>South Quay Plaza, London</strong> — uno de los desarrollos más altos de Londres.",
+        "<strong>Tommy Hilfiger's villa, Miami</strong> — residencia personal del diseñador.",
+        "<strong>Villa P, Lyon, Francia.</strong>"
+      ]},
+      {h:"4. Los diseñadores que firman las colecciones", paragraphs:[
+        "<strong>Karim Rashid</strong> — diseñador industrial canadiense-egipcio mundialmente reconocido.",
+        "<strong>Stefano Boeri</strong> — arquitecto italiano, padre del 'Bosco Verticale' de Milán.",
+        "<strong>Marco Piva</strong> — arquitecto y diseñador industrial italiano de referencia.",
+        "<strong>Ferruccio Laviani</strong> — diseñador italiano colaborador histórico de Kartell.",
+        "<strong>Massimo Iosa Ghini</strong> — pionero del 'Bolidismo', diseñador italiano referencia.",
+        "<strong>Makio Hasuike</strong> — diseñador japonés establecido en Milán, ganador del Compasso d'Oro.",
+        "<strong>Davide Oldani</strong> — chef italiano (concepto 'cucina pop')."
+      ]},
+      {h:"5. Cómo se traduce eso en argumento de venta", paragraphs:[
+        "<strong>Frase #1:</strong> '<em>La cocina que vas a tener en tu unidad sale de la misma fábrica italiana que armó el 432 Park Avenue de Nueva York. Misma manufactura, mismo estándar de control de calidad, misma firma Made in Italy.</em>'",
+        "<strong>Frase #2:</strong> '<em>Los diseñadores que colaboran con la marca son Karim Rashid y Stefano Boeri — los mismos que diseñan colecciones de los muebles más caros del mundo. Esa firma queda en tu unidad.</em>'",
+        "<strong>Frase #3:</strong> '<em>Rastelli + Aran tiene 700 torres en 120 países. The Don Dom es uno de esos proyectos. La marca que elegimos no equipa proyectos comunes — equipa torres icónicas. Esa es la liga en la que está jugando tu inversión.</em>'",
+        "<strong>Frase #4 (para inversor):</strong> '<em>Cuando vayas a vender tu unidad en 5 años, el corredor va a decir: cocina Made in Italy, firma Aran. Eso sube el ticket de salida sin que tengas que invertir nada extra.</em>'"
+      ]},
+      {h:"6. Qué saber del producto en sí", paragraphs:[
+        "<strong>Calidad técnica:</strong> cocinas con frentes laminados o lacados según colección, alta resistencia a humedad (clave en Caribe), herrajes premium con cierre suave (Blum o Salice según colección), encimeras y tarja según especificación del proyecto.",
+        "<strong>Tiempo de producción:</strong> el equipamiento se manufactura en Abruzzo, Italia, y se envía por marítimo. Por eso es importante que el comprador entienda los tiempos — no es producto local de stock inmediato.",
+        "<strong>Garantía Aran:</strong> típicamente 10 años en estructura del mueble + garantía de fabricante en herrajes."
+      ]}
+    ],
+    cheat:[
+      "ARAN World: empresa italiana de cocinas, fundada 1962, sede Atri (Abruzzo).",
+      "Renzo Rastelli: empresario detrás de la marca; Aran Contract = proyectos.",
+      "+700 torres en 120 países equipadas por Aran Contract.",
+      "Proyectos icónicos: One Wall Street, 432 Park Avenue, South Quay Plaza Londres, Tommy Hilfiger villa Miami.",
+      "Designers: Karim Rashid, Stefano Boeri, Marco Piva, Makio Hasuike."
+    ],
+    roleplays:[
+      {title:"Caso A — Cliente pregunta '¿son cocinas buenas o son las típicas de proyecto?'",
+       setup:"<strong>Respuesta modelo:</strong> 'Son cocinas firmadas por Arancucine, fabricadas en Italia, de la misma fábrica que equipó el 432 Park Avenue en Manhattan. No son cocinas locales. Es marca italiana de portafolio premium. Te paso link al portafolio si querés verlo: <a href=\"https://rastelli.com/aran-contract/\" target=\"_blank\" rel=\"noopener\">rastelli.com/aran-contract</a>'"},
+      {title:"Caso B — Cliente analítico pregunta '¿cuánto vale eso si lo cotizo aparte?'",
+       setup:"<strong>Respuesta modelo:</strong> 'La cocina equivalente comprada por separado a través de un distribuidor en RD ronda los US$15,000–25,000 según tipología. En The Don Dom viene incluida en el precio de la unidad. Ese diferencial es parte del valor que estás capturando al comprar acá vs. en otro proyecto sin esta firma.'"}
+    ],
+    quiz:"Test de 12 preguntas. Historia ARAN/Rastelli, número de torres y países, proyectos icónicos en NY, designers, ventajas vs. cocina genérica."
+  },
+  {
+    code:"M9", num:9,
+    title:"Xëliter — Administración hotelera profesional",
+    subtitle:"Administrador hotelero · modelo operativo, OTAs y app del propietario incluidos",
+    duration:"60 min",
+    jotform:"261330180630040",
+    pdf:"./pdfs/M9_Xeliter_Administracion_Hotelera.pdf",
+    objective:"Saber explicar el programa de gestión hotelera profesional Xëliter, sus ventajas vs. gestionar por Airbnb por cuenta propia, y por qué este aliado le da credibilidad al TIR proyectado del proyecto.",
+    sections:[
+      {h:"1. Quién es Xëliter", paragraphs:[
+        "<strong>Xëliter</strong> es la marca de vacation rentals y administración hotelera de <strong>Coral Hospitality Corp (CHC)</strong>, una de las operadoras más sólidas de República Dominicana en el segmento de propiedades de alquiler turístico premium.",
+        "<strong>Opera propiedades en los destinos turísticos clave del país:</strong> Cap Cana (Xëliter Azzure, Xëliter Golden Bear Lodge), Punta Cana (Xëliter Cana Rock), Puerto Plata (Xëliter Green One), Juan Dolio (Xëliter Las Olas), Las Terrenas (Xëliter Balcones del Atlántico) — y villas exclusivas en Casa de Campo, Samaná, Punta Cana, Palmar de Ocoa y Los Mogotes.",
+        "Es la marca operativa que está detrás de muchos de los proyectos premium de RD. Cuando ven la marca Xëliter, los inversores sofisticados entienden inmediatamente que el proyecto tiene gestión profesional."
+      ]},
+      {h:"2. Qué es el Programa de Gestión", paragraphs:[
+        "<strong>El propietario delega la operación completa de su unidad:</strong> marketing del listado, captación de huéspedes, check-in/check-out, limpieza, mantenimiento, atención al huésped 24/7, reporte mensual de ingresos y ocupación.",
+        "<strong>El propietario sigue siendo el dueño del título de propiedad.</strong> Lo que delega es la operación. El programa se firma con un contrato típico de 1 a 3 años con renovación.",
+        "<strong>El propietario recibe un ingreso mensual neto</strong> después de comisiones de gestión y gastos operativos. La distribución se documenta y se transparenta en reportes mensuales."
+      ]},
+      {h:"3. Xëliter vs. Airbnb por cuenta propia", paragraphs:[
+        "<strong>Airbnb por cuenta propia:</strong> el propietario hace todo (listado, fotos, fijación de precios dinámicos, mensajería, check-in, limpieza, mantenimiento). Pros: comisión cero. Contras: si el propietario vive lejos o tiene otra actividad, la operación se cae y la ocupación baja al 30–40% rápidamente.",
+        "<strong>Xëliter (gestión profesional):</strong> comisión variable según contrato, pero a cambio el operador profesional logra ocupaciones del <strong>65–80%</strong> según temporada, fija precios dinámicos con software hotelero, garantiza turnover rápido entre huéspedes, cubre emergencias 24/7. El TIR neto al propietario suele ser superior al de auto-gestión amateur a pesar de la comisión.",
+        "<strong>Cuándo recomendar Xëliter al cliente:</strong> (a) cliente vive en el exterior, (b) cliente tiene profesión exigente que no le permite gestionar, (c) cliente no quiere ser hotelero y prefiere recibir ingreso neto.",
+        "<strong>Cuándo el cliente puede preferir auto-gestión:</strong> (a) vive cerca de La Romana y tiene tiempo, (b) ya tiene experiencia con Airbnb y portafolio, (c) prefiere control directo aunque le cueste TIR."
+      ]},
+      {h:"4. Cómo eso se traduce en argumento de venta", paragraphs:[
+        "<strong>Frase #1:</strong> '<em>La inversión está respaldada por una operadora profesional que también opera Cap Cana, Las Terrenas y Puerto Plata. No te estamos vendiendo una proyección teórica; te estamos vendiendo una operación real que ya funciona en otras propiedades del Caribe dominicano.</em>'",
+        "<strong>Frase #2 (al inversor extranjero):</strong> '<em>No tenés que aprender a operar una propiedad en RD. Le firmás a Xëliter, recibís un reporte mensual con depósito de la renta neta a tu cuenta, y volvés a tu vida en Italia / Estados Unidos. Es modelo turn-key.</em>'",
+        "<strong>Frase #3 (al inversor analítico):</strong> '<em>El TIR proyectado del 8–12% no es un número de marketing — está construido sobre las tarifas actuales y la ocupación histórica que Xëliter logra en propiedades comparables. Te paso el desglose en planilla.</em>'"
+      ]},
+      {h:"5. Lo que el vendedor debe verificar antes de prometer", paragraphs:[
+        "Confirmar con el departamento comercial si el contrato Xëliter es OBLIGATORIO o OPCIONAL para los propietarios. (Hay proyectos donde es obligatorio en fase 1 y opcional después.)",
+        "Confirmar los honorarios exactos del programa (típicamente entre 15% y 25% sobre la renta bruta, según propiedad y temporada).",
+        "Tener a mano un ejemplo numérico real para clientes analíticos: tarifa promedio mensual + ocupación esperada + comisión + gastos operativos = renta neta al propietario.",
+        "<strong>NUNCA prometer un TIR específico por escrito</strong> sin la aprobación del departamento financiero del proyecto."
+      ]}
+    ],
+    cheat:[
+      "Xëliter: marca de Coral Hospitality Corp (CHC).",
+      "Opera 6 propiedades + villas: Cap Cana, Punta Cana, Puerto Plata, Juan Dolio, Las Terrenas + Casa de Campo, Samaná.",
+      "Programa de Gestión: delegación completa; propietario sigue siendo dueño.",
+      "Ocupaciones logradas: 65–80% según temporada.",
+      "Comisión típica: 15–25% sobre renta bruta (verificar con comercial)."
+    ],
+    roleplays:[
+      {title:"Caso A — Inversor extranjero pregunta '¿quién va a gestionar mi propiedad?'",
+       setup:"<strong>Respuesta modelo:</strong> 'La gestión la hace Xëliter, una marca de Coral Hospitality Corp que ya opera Cap Cana, Puerto Plata, Punta Cana, Las Terrenas y Juan Dolio. Es el aliado que asegura que tu unidad esté lista para huéspedes 365 días al año mientras vos seguís tu vida en Milán. Es modelo turn-key.'"},
+      {title:"Caso B — Cliente local pregunta '¿puedo gestionarla yo en Airbnb?'",
+       setup:"<strong>Respuesta modelo honesta:</strong> 'Sí, podés. Hay dueños que lo hacen. Te lo recomiendo si vivís cerca y tenés tiempo. Si vivís en Santo Domingo o Santiago, te conviene Xëliter — la ocupación con auto-gestión amateur cae al 30–40%, con Xëliter está en 65–80%. La comisión la recuperás en ocupación.'"}
+    ],
+    quiz:"Test de 12 preguntas. Datos Xëliter (matriz, propiedades, destinos), programa de gestión, ventajas vs. auto-gestión, criterios para recomendar uno u otro modelo."
+  },
+  {
+    code:"M10", num:10,
+    title:"Argumentario comercial integrado · Examen Final",
+    subtitle:"Los 8 diferenciadores únicos, manejo de objeciones, cierre y apertura de conversación",
+    duration:"75 min",
+    jotform:"261331137783052",
+    pdf:"./pdfs/M10_Argumentario_Comercial_Integrado.pdf",
+    objective:"Conectar lo aprendido en los 8 módulos anteriores en un argumentario comercial coherente. Saber recitar el pitch completo en 7 minutos, manejar las 10 objeciones más frecuentes y cerrar con una llamada a la acción específica. Examen final de certificación.",
+    sections:[
+      {h:"1. El pitch integrado en 7 minutos", paragraphs:[
+        "<strong>Minuto 1 — Geografía:</strong> '<em>The Don Dom está en Dominicus, La Romana, a 15 minutos del aeropuerto LRM, vecino a Casa de Campo, frente a Saona y Catalina. No es Punta Cana ni Bávaro — es el Caribe selecto que todavía no se masificó.</em>'",
+        "<strong>Minuto 2 — Marca de proyecto:</strong> '<em>Es desarrollo de BECCA, con un equipo de aliados que ningún proyecto promedio de la zona tiene reunidos.</em>'",
+        "<strong>Minuto 3 — Cuarto Interior:</strong> '<em>El diseño de los espacios lo firma Cuarto Interior, un estudio de Madrid con portafolio del Mondrian Ibiza, Hyde Ibiza, Hard Rock Marbella, Casino Gran Madrid.</em>'",
+        "<strong>Minuto 4 — Arancucine + Rastelli:</strong> '<em>El equipamiento de cocina viene de Aran Contract, la misma fábrica italiana que equipó 432 Park Avenue, One Wall Street y South Quay Plaza Londres — más de 700 torres en 120 países.</em>'",
+        "<strong>Minuto 5 — Xëliter:</strong> '<em>La operación se la confiamos a Xëliter, la operadora que ya administra Cap Cana, Puerto Plata, Punta Cana, Juan Dolio y Las Terrenas. Eso es lo que sostiene el TIR proyectado de 8–12% neto anual.</em>'",
+        "<strong>Minuto 6 — Plusvalía:</strong> '<em>Plusvalía proyectada de 15–25% en los primeros 24 meses post-entrega. La calificación CONFOTUR del proyecto está en proceso bajo Ley 158-01/195-13; al confirmarse exonera ITBI e IPI por 15 años en zonas turísticas calificadas.</em>'",
+        "<strong>Minuto 7 — Llamada a la acción:</strong> '<em>Tenemos catálogo de tipologías para tres perfiles: inversor puro, inversor mixto, comprador patrimonial. ¿Vamos a ver cuál encaja con tu plan?</em>'"
+      ]},
+      {h:"2. Las 10 objeciones más frecuentes — respuestas modelo", paragraphs:[
+        "<strong>Objeción 1 — 'Está caro vs. Punta Cana.'</strong> Respuesta: '<em>Precisamente por eso. Lo caro de Dominicus hoy es lo barato de Dominicus en 24 meses. La plusvalía proyectada del 15–25% lo justifica con datos.</em>'",
+        "<strong>Objeción 2 — 'Bayahibe no se conoce.'</strong> Respuesta: '<em>Bayahibe es exactamente lo que estaba Punta Cana hace 12 años. Si entrás antes del ruido masivo, capturás la plusvalía. Si esperás, comprás caro.</em>'",
+        "<strong>Objeción 3 — 'Me lo quiero pensar.'</strong> Respuesta: '<em>Perfecto. Antes de que salgas, decime: ¿qué te tendría que pasar en estos días para que vuelvas con un sí?</em>'",
+        "<strong>Objeción 4 — '¿Y si la renta turística no funciona?'</strong> Respuesta: '<em>Por eso traemos a Xëliter — que ya opera 6 propiedades en RD con 65–80% de ocupación histórica. Es operación real, no proyección.</em>'",
+        "<strong>Objeción 5 — 'Tengo que hablar con mi pareja.'</strong> Respuesta: '<em>Por supuesto. Te dejo bloqueada la unidad por 72 horas. ¿Querés que prepare un dossier para que se lo muestres?</em>'",
+        "<strong>Objeción 6 — 'No conozco a BECCA.'</strong> Respuesta: '<em>Entiendo. Por eso el proyecto se respalda en aliados internacionales con track-record verificable: Cuarto Interior, Aran Contract, Xëliter. Esos sí los podés googlear ahora mismo.</em>'",
+        "<strong>Objeción 7 — '¿Y si quiero vender en 3 años?'</strong> Respuesta: '<em>Podés. La plusvalía proyectada te deja con ganancia neta. Si al cierre el proyecto ya tiene la calificación CONFOTUR confirmada (hoy está en proceso), los beneficios te exoneran de ITBI. Te muestro el cálculo de salida.</em>'",
+        "<strong>Objeción 8 — 'No sé si puedo manejar la operación.'</strong> Respuesta: '<em>Esa es la pregunta correcta. Por eso el programa Xëliter — vos no operás nada. Recibís un depósito mensual y un reporte. Modelo turn-key.</em>'",
+        "<strong>Objeción 9 — 'Quiero comparar con Cap Cana.'</strong> Respuesta: '<em>Sano. Cap Cana es ultra-alta gama con ticket fuera de la mayoría de inversores RD. Dominicus te da Caribe selecto, vecino a Casa de Campo, con ticket accesible. Son perfiles distintos, no comparables uno a uno.</em>'",
+        "<strong>Objeción 10 — 'No es buen momento para invertir.'</strong> Respuesta: '<em>Te entiendo. ¿Qué tendría que pasar para que sea buen momento? Si la respuesta involucra tasa de la FED o tipo de cambio, lo discutimos. Si la respuesta es miedo, lo discutimos también — porque el miedo es el peor consejero financiero del mundo.</em>'"
+      ]},
+      {h:"3. El cierre — cómo pasar del pitch a la firma", paragraphs:[
+        "<strong>Regla 1:</strong> no presentes precio sin antes haber confirmado el perfil del cliente. Estudio, 1 hab, 2 hab o ático — y cuál es el suyo.",
+        "<strong>Regla 2:</strong> cuando llegues al precio, presentá las dos opciones de pago (financiamiento o contado con descuento) — siempre como Cierre de la Alternativa.",
+        "<strong>Regla 3:</strong> si el cliente está al 90%, ofrecé una concesión condicional REAL y limitada en tiempo (verificada con tu líder previamente).",
+        "<strong>Regla 4:</strong> si el cliente está al 100%, callate. El primero que habla pierde. Aguantá el silencio.",
+        "<strong>Regla 5:</strong> post-cierre, primer mensaje en 24 horas. Frase: '<em>Felicitaciones por la decisión. Te paso los pasos de los próximos 10 días.</em>' Eso reduce el remordimiento del comprador."
+      ]}
+    ],
+    cheat:[
+      "Pitch de 7 minutos: Geografía → Marca → Cuarto Interior → Aran → Xëliter → Plusvalía → CTA.",
+      "10 objeciones top con respuesta modelo memorizadas.",
+      "Cierre: descubrir perfil → 2 opciones de pago → silencio → seguimiento 24h.",
+      "<strong>Examen final = certificación interna del programa.</strong>"
+    ],
+    roleplays:[
+      {title:"Caso integral — Reunión completa de 45 minutos",
+       setup:"<strong>Cliente:</strong> Don Andrés De Los Santos, 45, empresario de Santiago. Primera reunión. <strong>Tu meta:</strong> completar pitch de 7 min, descubrir perfil, ofrecer una tipología, manejar 2 objeciones, intentar bloqueo de 72 horas o reserva.",
+       bullets:[
+         "Minuto 0–7: pitch integrado completo (los 7 minutos del módulo).",
+         "Minuto 7–20: descubrimiento del cliente (cómo gana plata, primera inversión RE, perfil de uso).",
+         "Minuto 20–30: oferta de tipología recomendada + presentación de planos/renders.",
+         "Minuto 30–40: manejo de 2 objeciones típicas (precio + 'lo quiero pensar').",
+         "Minuto 40–45: cierre con doble opción + bloqueo de 72 horas si no firma hoy."
+       ]}
+    ],
+    quiz:"Examen integral de 27 preguntas. Cubre los 8 módulos anteriores. Resultado ≥89% = certificación interna del programa The Don Dom La Isla."
+  }
+];
+
+// ============ STATE & AUTH (Netlify Identity + localStorage fallback) ============
+const KEY = 'gritt_thedondom_progress_v3';
+let state = { modules: {}, freeAccess: false };
+let currentUser = null;
+
+function loadLocalCache(emailKey) {
+  try {
+    const raw = localStorage.getItem(KEY + ':' + (emailKey || 'anon'));
+    if (!raw) return null;
+    const saved = JSON.parse(raw);
+    return (saved && saved.modules) ? saved : null;
+  } catch(e){ return null; }
+}
+function writeLocalCache(emailKey, st) {
+  try { localStorage.setItem(KEY + ':' + (emailKey || 'anon'), JSON.stringify(st)); } catch(e){}
+}
+
+function save(opts) {
+  // 1. Cache local instantánea
+  if (currentUser) writeLocalCache(currentUser.email, state);
+  // 2. Persistencia remota
+  if (currentUser && currentUser.update) {
+    currentUser.update({ data: { progress: state } }).catch(err => {
+      console.warn('No se pudo guardar el progreso en el servidor:', err);
+    });
+  }
+  // 3. Update parcial (no destruye el accordion ni cierra módulos abiertos)
+  if (opts && opts.fullRender) {
+    render();
+  } else {
+    updateProgressBar();
+    if (opts && opts.affectedCode) {
+      updateModuleBadge(opts.affectedCode);
+    }
+  }
+}
+
+function updateProgressBar() {
+  const done = MODULES.filter(m => isEvaluated(m.code)).length;
+  const pct = Math.round((done / MODULES.length) * 100);
+  const fill = document.getElementById('fill');
+  const count = document.getElementById('count');
+  if (fill) fill.style.width = pct + '%';
+  if (count) count.textContent = done + ' / ' + MODULES.length;
+}
+
+function updateModuleBadge(code) {
+  const el = document.querySelector('details.module[data-code="' + code + '"]');
+  if (!el) return;
+  const evaluated = isEvaluated(code);
+  const read = isRead(code);
+  el.classList.remove('done', 'open-status', 'locked');
+  if (evaluated) el.classList.add('done');
+  else el.classList.add('open-status');
+  // Actualizar el subtítulo "Disponible/En curso/Completado"
+  const codeLabel = el.querySelector('.head-text .code');
+  if (codeLabel) {
+    const m = MODULES.find(x => x.code === code);
+    const statusText = evaluated ? 'Completado ✓' : (read ? 'En curso' : 'Disponible');
+    codeLabel.textContent = 'Módulo ' + m.num + ' · ' + statusText;
+  }
+  // Si se marcó evaluado, hay que actualizar también el siguiente módulo (que se desbloquea)
+  if (evaluated) {
+    const next = MODULES.find(m => m.num === MODULES.find(x => x.code === code).num + 1);
+    if (next) {
+      const wasLocked = document.querySelector('details.module[data-code="' + next.code + '"]').classList.contains('locked');
+      if (wasLocked) {
+        // Re-render solo del siguiente módulo (para que pase de locked a unlocked)
+        rerenderSingleModule(next.code);
+      }
+    }
+  }
+}
+
+function rerenderSingleModule(code) {
+  const idx = MODULES.findIndex(m => m.code === code);
+  if (idx < 0) return;
+  const m = MODULES[idx];
+  const oldEl = document.querySelector('details.module[data-code="' + code + '"]');
+  if (!oldEl) return;
+  const wasOpen = oldEl.open;
+  const tmp = document.createElement('div');
+  tmp.innerHTML = buildModule(m, idx);
+  const newEl = tmp.firstChild;
+  if (wasOpen) newEl.setAttribute('open', '');
+  oldEl.replaceWith(newEl);
+  // Re-bind handlers solo de este módulo
+  bindHandlersInside(newEl);
+}
+
+function bindHandlersInside(root) {
+  root.querySelectorAll('input[data-read]').forEach(el => {
+    el.addEventListener('change', e => {
+      const code = e.target.dataset.read;
+      if (!state.modules[code]) state.modules[code] = {};
+      state.modules[code].read = e.target.checked;
+      save({ affectedCode: code });
+    });
+  });
+  root.querySelectorAll('button[data-open-jot]').forEach(btn => {
+    btn.addEventListener('click', e => {
+      const code = e.target.dataset.openJot;
+      const mod = MODULES.find(m => m.code === code);
+      const frame = document.querySelector('iframe[data-jot-frame="' + code + '"]');
+      const note = document.querySelector('p[data-note="' + code + '"]');
+      if (frame) {
+        frame.src = 'https://form.jotform.com/' + mod.jotform + '?embed=1';
+        frame.classList.add('active');
+        if (note) note.style.display = 'block';
+        setTimeout(() => frame.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
+      }
+    });
+  });
+}
+
+function loadStateFromUser(user) {
+  currentUser = user;
+  const remote = (user.user_metadata && user.user_metadata.progress) || null;
+  const local = loadLocalCache(user.email);
+  // Tomamos el más completo (más módulos evaluados)
+  function score(s) {
+    if (!s || !s.modules) return -1;
+    return Object.values(s.modules).filter(m => m && m.evaluated).length + (s.freeAccess ? 100 : 0);
+  }
+  const best = score(remote) >= score(local) ? remote : local;
+  state = best || { modules: {}, freeAccess: false };
+  // Sincronizar: subir lo local si era mejor
+  if (best === local && local) {
+    user.update({ data: { progress: local } }).catch(()=>{});
+  }
+  updateUserUI(user);
+  document.body.classList.remove('logged-out');
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('user-area').style.display = 'flex';
+  render();
+}
+
+function showLoginScreen() {
+  currentUser = null;
+  state = { modules: {}, freeAccess: false };
+  document.body.classList.add('logged-out');
+  document.getElementById('login-screen').style.display = 'flex';
+  document.getElementById('user-area').style.display = 'none';
+}
+
+function updateUserUI(user) {
+  const fullName = (user.user_metadata && user.user_metadata.full_name) || user.email || '';
+  const display = fullName.split('@')[0];
+  const initials = display.split(/[\s.]+/).map(s => s[0]).filter(Boolean).slice(0,2).join('').toUpperCase();
+  document.getElementById('user-name').textContent = display;
+  document.getElementById('user-avatar').textContent = initials || '•';
+}
+
+// Inicialización del widget de Netlify Identity
+window.addEventListener('DOMContentLoaded', () => {
+  if (typeof netlifyIdentity === 'undefined') {
+    // Si Identity no cargó (red, bloqueo de scripts), fallback a localStorage anónimo
+    console.warn('Netlify Identity no disponible — usando modo offline solo localStorage.');
+    const local = loadLocalCache('anon');
+    if (local) state = local;
+    document.getElementById('login-screen').innerHTML = '<div class="box"><div class="logo-big">gritt<span class="dot">.</span></div><div class="tag">Modo offline</div><h1>No se pudo conectar al sistema de login</h1><p>Verificá tu conexión a internet o probá recargar la página. Tu progreso queda guardado localmente en este dispositivo.</p><button class="btn-login" onclick="document.body.classList.remove(\'logged-out\');document.getElementById(\'login-screen\').style.display=\'none\';render()">Continuar igualmente</button></div>';
+    return;
+  }
+  netlifyIdentity.on('init', user => { user ? loadStateFromUser(user) : showLoginScreen(); });
+  netlifyIdentity.on('login', user => { loadStateFromUser(user); netlifyIdentity.close(); });
+  netlifyIdentity.on('logout', () => { showLoginScreen(); });
+  netlifyIdentity.init({ locale: 'es' });
+
+  // Bypass del modal del widget (tiene bug que no inyecta contenido) → redirect directo a Google OAuth
+  document.getElementById('btn-login').addEventListener('click', () => {
+    window.location.href = window.location.origin + '/.netlify/identity/authorize?provider=google';
+  });
+  document.getElementById('btn-logout').addEventListener('click', () => netlifyIdentity.logout());
+});
+
+function isUnlocked(num) {
+  if (state.freeAccess) return true;
+  if (num === 0) return true;
+  const prev = MODULES[num - 1];
+  return state.modules[prev.code] && state.modules[prev.code].evaluated;
+}
+
+function isEvaluated(code) {
+  return state.modules[code] && state.modules[code].evaluated;
+}
+
+function isRead(code) {
+  return state.modules[code] && state.modules[code].read;
+}
+
+function markRead(code) {
+  if (!state.modules[code]) state.modules[code] = {};
+  state.modules[code].read = true;
+  save({ affectedCode: code });
+}
+
+function markEvaluated(code) {
+  if (!state.modules[code]) state.modules[code] = {};
+  state.modules[code].evaluated = true;
+  state.modules[code].completedAt = Date.now();
+  const allDone = MODULES.every(m => state.modules[m.code] && state.modules[m.code].evaluated);
+  if (allDone) state.freeAccess = true;
+  save({ affectedCode: code });
+}
+
+// ============ RENDER ============
+function buildParagraph(text) {
+  return '<p>' + text + '</p>';
+}
+function buildSection(s) {
+  return '<div class="section-block"><h6>' + s.h + '</h6>' + s.paragraphs.map(buildParagraph).join('') + '</div>';
+}
+function buildRoleplay(r) {
+  let html = '<div class="rp"><h6>' + r.title + '</h6>';
+  if (r.setup) html += '<div class="setup">' + r.setup + '</div>';
+  if (r.bullets) html += '<ul>' + r.bullets.map(b => '<li>' + b + '</li>').join('') + '</ul>';
+  html += '</div>';
+  return html;
+}
+
+function buildModule(m, idx) {
+  const unlocked = isUnlocked(idx);
+  const evaluated = isEvaluated(m.code);
+  const read = isRead(m.code);
+  let classes = 'module';
+  if (!unlocked) classes += ' locked';
+  else if (evaluated) classes += ' done';
+  else classes += ' open-status';
+
+  if (!unlocked) {
+    const prev = MODULES[idx - 1];
+    return '<details class="' + classes + '" id="' + m.code.toLowerCase() + '" data-code="' + m.code + '" data-num="' + m.num + '">' +
+      '<summary>' +
+      '<div class="badge"><span class="num">' + m.num + '</span></div>' +
+      '<div class="head-text">' +
+      '<span class="code">Módulo ' + m.num + ' · bloqueado</span>' +
+      '<h4>' + m.title + '</h4>' +
+      '<div class="sub">Completá la evaluación del Módulo ' + prev.num + ' para desbloquear este módulo.</div>' +
+      '</div>' +
+      '<div class="head-meta"><span class="duration">🔒 Bloqueado</span><div class="chev">+</div></div>' +
+      '</summary>' +
+      '<div class="body"><div class="locked-msg">Este módulo se desbloquea automáticamente cuando completes la evaluación del <strong>Módulo ' + prev.num + ': ' + prev.title + '</strong>.</div></div>' +
+      '</details>';
+  }
+
+  const statusText = evaluated ? 'Completado ✓' : (read ? 'En curso' : 'Disponible');
+
+  let html = '<details class="' + classes + '" id="' + m.code.toLowerCase() + '" data-code="' + m.code + '" data-num="' + m.num + '">' +
+    '<summary>' +
+    '<div class="badge"><span class="num">' + m.num + '</span></div>' +
+    '<div class="head-text">' +
+    '<span class="code">Módulo ' + m.num + ' · ' + statusText + '</span>' +
+    '<h4>' + m.title + '</h4>' +
+    '<div class="sub">' + m.subtitle + '</div>' +
+    '</div>' +
+    '<div class="head-meta"><span class="duration">' + m.duration + '</span><div class="chev">+</div></div>' +
+    '</summary>' +
+    '<div class="body">' +
+    '<div class="objective"><div class="lab">Objetivo del módulo</div><p>' + m.objective + '</p></div>' +
+    '<div class="row two">' +
+    '<div class="block">' +
+    '<h5>Contenido del módulo</h5>' +
+    m.sections.map(buildSection).join('') +
+    '</div>' +
+    '<div class="block cheat">' +
+    '<h5>Lo que tenés que saber de memoria</h5>' +
+    '<ul>' + m.cheat.map(c => '<li>' + c + '</li>').join('') + '</ul>' +
+    '</div>' +
+    '</div>' +
+    '<div class="roleplays">' +
+    '<h5 style="color:var(--naranja);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin:32px 0 6px">Casos prácticos para entrenar</h5>' +
+    m.roleplays.map(buildRoleplay).join('') +
+    '</div>' +
+    '<div class="read-mark">' +
+    '<label><input type="checkbox" data-read="' + m.code + '"' + (read ? ' checked' : '') + '/> Marcar el contenido como leído</label>' +
+    '</div>' +
+    (m.pdf ? '<div class="pdf-bar"><a class="btn small verde" href="' + m.pdf + '" target="_blank" rel="noopener" download>📄 Descargar PDF del módulo</a><span class="pdf-note">Estudia, subraya o imprime el contenido completo de este módulo.</span></div>' : '') +
+    '<div class="eval">' +
+    '<h5>Evaluación del módulo</h5>' +
+    '<p class="eval-preview">' + m.quiz + '</p>' +
+    (evaluated
+      ? '<div class="done-banner show"><strong>✓ Módulo completado.</strong> ' + (idx < MODULES.length - 1 ? 'Ya tenés desbloqueado el Módulo ' + (idx + 1) + '.' : 'Programa completo. <strong>Certificación interna lograda.</strong>') + '</div>'
+      : '<div class="eval-actions">' +
+        '<button class="btn small naranja" data-open-jot="' + m.code + '"' + (!read ? ' disabled title="Marcá el contenido como leído primero"' : '') + '>Abrir evaluación · ' + m.code + '</button>' +
+        '</div>' +
+        '<p class="auto-detect-note" style="display:none" data-note="' + m.code + '">Al enviar el formulario, el módulo se marca como completado automáticamente.</p>' +
+        '<iframe class="jotform-frame" data-jot-frame="' + m.code + '" src="" title="Evaluación ' + m.code + '"></iframe>'
+    ) +
+    '</div>' +
+    '</div>' +
+    '</details>';
+  return html;
+}
+
+function render() {
+  const container = document.getElementById('modules');
+  container.innerHTML = MODULES.map((m, i) => buildModule(m, i)).join('');
+  updateProgressBar();
+  bindHandlersInside(container);
+}
+
+document.getElementById('reset').addEventListener('click', () => {
+  if (confirm('¿Resetear todo tu progreso? Vas a perder el desbloqueo de los módulos.')) {
+    state = { modules: {}, freeAccess: false };
+    save();
+  }
+});
+
+// Detección automática de envío de Jotform via postMessage
+// Jotform envía varios eventos: "submission-completed:formId", JSON con action, redirect, etc.
+function detectJotformSubmit(rawData) {
+  // 1. Si es string con patrones conocidos
+  if (typeof rawData === 'string') {
+    const txt = rawData.toLowerCase();
+    const isSubmit = txt.indexOf('submission-completed') !== -1 ||
+                     txt.indexOf('formid:') !== -1 && txt.indexOf('submit') !== -1 ||
+                     txt.indexOf('"action":"submission-completed"') !== -1 ||
+                     txt.indexOf('thankyou') !== -1 ||
+                     txt.indexOf('thank-you') !== -1;
+    if (!isSubmit) return null;
+    for (const m of MODULES) {
+      if (rawData.indexOf(m.jotform) !== -1) return m.code;
+    }
+    // Si llega un submit genérico, ver cuál es el iframe activo en pantalla
+    const activeFrames = document.querySelectorAll('iframe.jotform-frame.active');
+    if (activeFrames.length === 1) {
+      return activeFrames[0].dataset.jotFrame;
+    }
+    return null;
+  }
+  // 2. Si es objeto JSON
+  if (rawData && typeof rawData === 'object') {
+    const action = (rawData.action || rawData.event || '').toString().toLowerCase();
+    const isSubmit = action.indexOf('submit') !== -1 || action.indexOf('completed') !== -1;
+    if (!isSubmit) return null;
+    const formId = String(rawData.formId || rawData.formID || rawData.form || '');
+    for (const m of MODULES) {
+      if (formId === m.jotform) return m.code;
+    }
+    const activeFrames = document.querySelectorAll('iframe.jotform-frame.active');
+    if (activeFrames.length === 1) {
+      return activeFrames[0].dataset.jotFrame;
+    }
+  }
+  return null;
+}
+
+window.addEventListener('message', function(e) {
+  // Verificar origen jotform (form.jotform.com, www.jotform.com, jotform.us, etc.)
+  if (!e.origin || e.origin.indexOf('jotform') === -1) return;
+  const code = detectJotformSubmit(e.data);
+  if (code && !isEvaluated(code)) {
+    markEvaluated(code);
+    // mostrar feedback visual al usuario
+    const banner = document.createElement('div');
+    banner.style.cssText = 'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--verde-oscuro);color:#fff;padding:14px 24px;border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.25);font-weight:600;z-index:1000;font-family:Poppins,sans-serif';
+    banner.textContent = '✓ Evaluación ' + code + ' enviada. Módulo completado.';
+    document.body.appendChild(banner);
+    setTimeout(() => banner.remove(), 4000);
+  }
+});
+
+// El render inicial ocurre dentro de loadStateFromUser() cuando el usuario está logueado.
+// Si no hay login disponible (offline), el botón "Continuar igualmente" llama render() manualmente.
+</script>
+
+</body>
+</html>
