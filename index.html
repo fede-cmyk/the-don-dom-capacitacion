@@ -1714,7 +1714,8 @@ function buildModule(m, idx) {
     (evaluated
       ? '<div class="done-banner show"><strong>✓ Módulo completado.</strong> ' + (idx < MODULES.length - 1 ? 'Ya tenés desbloqueado el Módulo ' + (idx + 1) + '.' : 'Programa completo. <strong>Certificación interna lograda.</strong>') + '</div>'
       : '<div class="eval-actions">' +
-        '<button class="btn small naranja" data-open-jot="' + m.code + '"' + (!read ? ' disabled title="Marcá el contenido como leído primero"' : '') + '>Abrir evaluación · ' + m.code + '</button>' +
+        '<button class="btn small naranja" data-open-jot="' + m.code + '"' + ((!read && !state.freeAccess) ? ' disabled title="Marcá el contenido como leído primero (checkbox arriba)"' : '') + '>Abrir evaluación · ' + m.code + '</button>' +
+        (!read && !state.freeAccess ? '<p style="margin:8px 0 0;font-size:12px;color:#a87663;font-style:italic">⚠ Tildá primero <strong>"Marcar el contenido como leído"</strong> arriba para habilitar la evaluación.</p>' : '') +
         '</div>' +
         '<p class="auto-detect-note" style="display:none" data-note="' + m.code + '">Al enviar el formulario, el módulo se marca como completado automáticamente.</p>' +
         '<iframe class="jotform-frame" data-jot-frame="' + m.code + '" src="" title="Evaluación ' + m.code + '"></iframe>'
